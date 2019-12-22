@@ -1,0 +1,49 @@
+@mixin font($size: false, $lh: false, $weight: false) {
+    @if $size {
+        font-size: $size;
+    }
+    @if $lh {
+        line-height: $lh;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+}
+
+@mixin link($link, $visit, $hover, $active) {
+    text-decoration: none;
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active {
+      color: $active;
+    }
+}
+
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin centering-xy() {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centering-x() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centering-y() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
