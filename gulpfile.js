@@ -27,35 +27,16 @@ gulp.task('scss', () => {
             grid: true
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('assets/css'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('css-libs', () => {
-    return gulp.src([
-        'node_modules/bootstrap/dist/css/bootstrap.min.css'
-    ])
-        .pipe(concat('_libs.scss'))
-        .pipe(gulp.dest('assets/scss/vendors'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('js-libs', () => {
-    return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
-    ])
-        .pipe(concat('libs.min.js'))
-        .pipe(gulp.dest('assets/js/dist'))
+        .pipe(gulp.dest('build/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('js', () => {
     return gulp.src([
-        'assets/js/app/app.js',
+        'assets/js/app.js',
     ])
         .pipe(concat('main.min.js'))
-        .pipe(gulp.dest('assets/js/dist'))
+        .pipe(gulp.dest('build/js/'))
         .pipe(webpackStream({
             output: {
                 filename: 'main.min.js',
@@ -76,14 +57,14 @@ gulp.task('js', () => {
                 ]
             }
         }))
-        .pipe((gulp.dest('assets/js/dist')))
+        .pipe((gulp.dest('build/js/')))
         .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', () => {
     gulp.watch('*.html', gulp.parallel('html'));
     gulp.watch('assets/scss/**/*.scss', gulp.parallel('scss'));
-    gulp.watch('assets/js/app/**/*.js', gulp.parallel('js'));
+    gulp.watch('assets/js/**/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('css-libs', 'js-libs', 'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'));
