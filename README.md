@@ -1,5 +1,6 @@
 # Hillel_graduation_project
 ------------------------------------
+
     Gulp manual:
 
   1. First of all, to work with gulp you need it to be installed globally on your pc. 
@@ -27,4 +28,3 @@
  because the final css file, which will be connected to html, is situated in 'build' folder. Sources must begin
   with: 
  '../../assets/.......'
- 
