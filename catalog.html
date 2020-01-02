@@ -11,14 +11,15 @@
 
 <body class="inner-page">
 
-    <header class="page-catalog-header">
-    <div class="container">
+<header class="page-catalog-header">
+    <div class="dream-team-container">
         <nav class="navbar">
             <div class="navbar__wrap-brand">
-                <a class="navbar__brand" href="index.html">
-                    <svg width="160" height="65" class="navbar__icon">
-                        <use xlink:href="assets/img/svg/sprite.svg#icon-nerds-logo"></use>
-                    </svg>
+                <a class="navbar__brand" href="#">
+                    LOGO
+                    <!-- <svg width="240" height="65" class="navbar__icon">
+                        <use xlink:href="assets/img/svg/sprite.svg#icon-logo-dt"></use>
+                    </svg> -->
                 </a>
             </div>
 
@@ -28,13 +29,13 @@
                         <a class="nav__link" href="index.html">Главная</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Клиенты</a>
+                        <a class="nav__link" href="#">Ноутбуки</a>
                     </li>
                     <li class="nav__item nav__item--current">
-                        <a class="nav__link" href="catalog.html">Магазин</a>
+                        <a class="nav__link" href="catalog.html">Телевизоры</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Контакты</a>
+                        <a class="nav__link" href="#">Телефоны</a>
                     </li>
                 </ul>
             </div>
@@ -48,6 +49,40 @@
                             </svg>
                             <span class="cart__text">Корзина</span>
                         </a>
+                        <div class="basket">
+                            <table class="basket__table">
+                                <tbody>
+                                    <tr>
+                                        <td class="basket__delete">
+                                            <button><span class="visually-hidden">Удалить</span></button>
+                                        </td>
+                                        <td class="basket__pic">
+                                            <img src="http://placekitten.com/g/33/33" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                                        </td>
+                                        <td class="basket__name">Пломбир с апельсиновым джемом</td>
+                                        <td class="basket__price">1,5 кг × <span>200 руб.</span></td>
+                                        <td class="basket__value">300 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="basket__delete">
+                                            <button><span class="visually-hidden">Удалить</span></button>
+                                        </td>
+                                        <td class="basket__pic">
+                                            <img src="http://placekitten.com/g/33/33" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                                        </td>
+                                        <td class="basket__name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                                        <td class="basket__price">1,5 кг × <span>300 руб.</span></td>
+                                        <td class="basket__value">450 руб.</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="basket__cost" colspan="5">Итого: 750 руб.</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <a class="basket__btn btn" href="#">Оформить заказ</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -59,165 +94,12 @@
     </div>
     </header>
 
-    <main class="page-main page-main--catalog container">
-        <aside class="filters">
-            <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
-                <fieldset class="filters__fieldset filters__fieldset--price">
-                    <h5 class="filters__title filters__title--price">Стоимость:</h5>
-                    <ul class="filters__list filters__list--price">
-                        <li class="filters__range-controls">
-                            <div class="filters__scale">
-                                <div class="filters__bar"></div>
-                            </div>
-                            <div class="filters__toggle filters__toggle--min"></div>
-                            <div class="filters__toggle filters__toggle--max"></div>
-                        </li>
-                        <li class="filters__price-controls">
-                            <label class="filters__label-price filters__label-price--min">
-                                от <input name="min-price" type="text" value="0">
-                            </label>
-                            <label class="filters__label-price filters__label-price--max">
-                                до <input name="max-price" type="text" value="15000">
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="filters__fieldset filters__fieldset--features">
-                    <h5 class="filters__title filters__title--features">Особенности:</h5>
-                    <ul class="filters__list filters__list--features">
-                        <li class="filters__item-option">
-                            <input type="checkbox" id="filter-slider" value="slider" class="visually-hidden filters__input filter__input--checkbox">
-                            <label for="filter-slider">Слайдер</label>
-                        </li>
-                        <li class="filters__item-option">
-                            <input type="checkbox" id="filter-advantages" value="advantages" class="visually-hidden filter__input filter__input--checkbox">
-                            <label for="filter-advantages">Блок преймуществ</label>
-                        </li>
-                        <li class="filters__item-option">
-                            <input type="checkbox" id="filter-news" valuevalue="news" class="visually-hidden filter__input filter__input--checkbox" checked="checked">
-                            <label for="fitler-news">Новости</label>
-                        </li>
-                        <li class="filters__item-option">
-                            <input type="checkbox" id="filter-gallery" class="visually-hidden filter__input filter__input--checkbox" value="gallery">
-                            <label for="filters-gallery">Галерея</label>
-                        </li>
-                        <li class="filters__item-option">
-                            <input type="checkbox" id="filter-cart" value="cart" class="visually-hidden filter__input filter__input--checkbox">
-                            <label for="filters-cart">Корзина</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <button class="filters__btn btn" type="submit">Показать</button>
-            </form>
-        </aside>
-        <section class="catalog">
-            <div class="catalog__sort sort">
-                <p class="sort__text">Сортировать:</p>
-                <ul class="sort__list">
-                    <li class="sort__item">
-                        <a href="#" class="sort__link sort__link--current">По цене</a>
-                    </li>
-                    <li class="sort__item">
-                        <a href="#" class="sort__link">По типу</a>
-                    </li>
-                    <li class="sort__item">
-                        <a href="#" class="sort__link">По названию</a>
-                    </li>
-                </ul>
-                <ul class="sort__toggle">
-                    <li class="sort__toggle-item">
-                        <a href="#" class="sort__toggle-link sort__toggle-link--down sort__toggle-link--current">
-                            <span class="visually-hidden">Вниз</span>
-                        </a>
-                    </li>
-                    <li class="sort__toggle-item">
-                        <a href="#" class="sort__toggle-link sort__toggle-link--up">
-                            <span class="visually-hidden">Вверх</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <ul class="catalog__list">
-                <li class="catalog__item">
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-sedona.jpg" alt="Sedona">
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">Sedona</h3>
-                        <p class="catalog__text">Информационный сайт для туристов</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-pink.jpg" alt="Pink App">
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">Pink App</h3>
-                        <p class="catalog__text">Продуктовый лендинг приложения для IOS и Android</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-barbershop.jpg" alt="Borodinski">
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">Barbershop</h3>
-                        <p class="catalog__text">Сайт салона красоты. Для мужчин, да.</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-mishka.jpg" alt="Mishka">
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">Mishka</h3>
-                        <p class="catalog__text">Интернета магазин вязаных игрушек</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-aplus.jpg" alt="A plus">
-
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">A plus</h3>
-                        <p class="catalog__text">Лендинг курсов повышения квалификации</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-
-                    <div class="catalog__item-browser"></div>
-                    <img class="catalog__img" src="assets/img/img-kvast.jpg" alt="Кваст">
-
-                    <div class="catalog__item-hide">
-                        <h3 class="catalog__title">Кваст</h3>
-                        <p class="catalog__text">Промо-сайт производителя крафтого кваса</p>
-                        <a class="catalog__btn btn" href="#">9 900 грн</a>
-                    </div>
-                </li>
-            </ul>
-            <nav class="pagination">
-                <ul class="pagination__list">
-                    <li class="pagination__item pagination__item">
-                        <a class="pagination__link pagination__link--current">1</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">3</a>
-                    </li>
-                    <li class="pagination__item pagination__item">
-                        <a class="pagination__link pagination__link--next" href="#">Следующая</a>
-                    </li>
-                </ul>
-            </nav>
+    <main class="page-main page-main--catalog dream-team-container">
+        <section class="product">
         </section>
     </main>
 
-    <footer class="page-footer main-footer container">
+    <footer class="page-footer main-footer dream-team-container">
         <section class="social">
             <ul class="social__list">
                 <li class="social__item">
@@ -278,5 +160,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="build/js/main.min.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
