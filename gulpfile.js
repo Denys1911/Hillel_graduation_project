@@ -4,12 +4,12 @@ const browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
-const svgstore = require("gulp-svgstore");
+const webpackStream = require('webpack-stream');
 
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
-            baseDir: "."
+            baseDir: "./"
         }
     });
 });
@@ -27,41 +27,38 @@ gulp.task('scss', () => {
             grid: true
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('assets/css'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('css-libs', () => {
-    return gulp.src([
-        'node_modules/bootstrap/dist/css/bootstrap.min.css'
-    ])
-        .pipe(concat('_libs.scss'))
-        .pipe(gulp.dest('assets/scss/vendors'))
+        .pipe(gulp.dest('build/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('js', () => {
-    return gulp.src('assets/js/**/*.js')
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('js-libs', () => {
     return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+        'assets/js/app.js',
     ])
-        .pipe(concat('libs.min.js'))
-        .pipe(gulp.dest('assets/js'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task("sprite", () => {
-    return gulp.src("assets/img/svg/icon-*.svg")
-        .pipe(svgstore({
-            inlineSvg: true
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest('build/js/'))
+        .pipe(webpackStream({
+            output: {
+                filename: 'main.min.js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env'],
+                                plugins: ['@babel/plugin-transform-runtime']
+                            }
+                        }
+                    }
+                ]
+            }
         }))
-        .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("source/img/svg"));
+        .pipe((gulp.dest('build/js/')))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', () => {
@@ -70,4 +67,4 @@ gulp.task('watch', () => {
     gulp.watch('assets/js/**/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('css-libs', 'scss', 'js-libs', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'));
