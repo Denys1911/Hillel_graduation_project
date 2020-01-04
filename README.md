@@ -1,6 +1,3 @@
-# Hillel_graduation_project
-------------------------------------
-
     Gulp manual:
 
   1. First of all, to work with gulp you need it to be installed globally on your pc. 
