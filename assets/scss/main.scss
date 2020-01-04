@@ -1,4 +1,3 @@
-@import "vendors/libs";
 @import "base/var";
 @import "base/fonts";
 @import "base/scaffolding";
@@ -140,17 +139,17 @@
         display: block;
     } // изменить модификатор на псевдоклассы
     &--design {
-        background:  url(./../img/slide1.png)
+        background:  url(../../assets/img/slide1.png)
                     93% 100%
                     no-repeat;
     }
     &--maths {
-        background: url(./../img/slide3.png)
+        background: url(../../assets/img/slide3.png)
                     100% 100%
                     no-repeat;
     }
     &--overtime {
-        background: url(./../img/slide3.png)
+        background: url(../../assets/img/slide3.png)
                     100% 100%
                     no-repeat;
     }
@@ -736,7 +735,7 @@ tr > td + td {
     height: 23px;
 
     // background-color: #000;
-    background-image: url("./../img/svg/icon-checkbox-on.svg");
+    background-image: url("../../assets/img/svg/icon-checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0
 }
@@ -1044,7 +1043,7 @@ tr > td + td {
     width: 30px;
     height: 30px;
 
-    background-image: url("../img/svg/icon-down-dir.svg");
+    background-image: url("../../assets/img/svg/icon-down-dir.svg");
     background-repeat: no-repeat;
     background-position: 11px 7px;
 }
@@ -1058,7 +1057,7 @@ tr > td + td {
     width: 30px;
     height: 30px;
 
-    background-image: url("../img/svg/icon-up-dir.svg");
+    background-image: url("../../assets/img/svg/icon-up-dir.svg");
     background-repeat: no-repeat;
     background-position: 11px 7px;
 
