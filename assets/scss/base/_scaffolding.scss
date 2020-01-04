@@ -11,13 +11,37 @@ body {
     font-size: 1.6rem;
 }
 
-.container {
-    width: 1200px;
+.main-container {
+    width: 320px;
     margin: 0 auto;
+
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+
+
+    @media (min-width: $desktop-width) {
+        width: 1200px;
+    }
+}
+
+.dream-container {
+    &--nav {
+        padding-bottom: 3rem;
+
+        background-color: #eeeeee;
+
+        @media (min-width: $desktop-width) {
+            padding-bottom: 0;
+
+        }
+    }
 }
 
 .page-header {
-    background-color: #eeeeee;
+    margin-bottom: 3rem;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 6rem;
+    }
 }
 
 .page-catalog-header {
@@ -26,14 +50,10 @@ body {
     background-color: $grey;
 }
 
-.page-header__wrap-title {
-
-}
-
 .page-header__title {
     margin: 0;
-    padding-top: 7.7rem;
-    padding-bottom: 10.8rem;
+    padding-top: 5.7rem;
+    padding-bottom: 5.7rem;
 
     text-align: center;
     font-size: 5.5rem;
@@ -44,10 +64,17 @@ body {
 .page-main {
     &--catalog {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         padding-left: 2rem;
         padding-right: 2rem;
+
         box-sizing: border-box;
+
+        @media (min-width: $desktop-width) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
     }
 }
 
@@ -66,6 +93,15 @@ img {
 .link {
     text-decoration: none;
     color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+tr > td + td {
+    padding: 0.5rem 0;
+    padding-left: 0.9rem;
 }
 
 .visually-hidden:not(:focus),
