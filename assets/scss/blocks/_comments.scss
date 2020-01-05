@@ -1,0 +1,63 @@
+.comments {
+    margin: 0 1rem;
+
+    @media (min-width: $desktop-width) {
+        width: 500px;
+    }
+}
+
+.comments__title {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    font-size: 2rem;
+    box-shadow: 0 1px 2px 1px #b1b2b4;
+    background-color: #eee;
+}
+
+.comments__form {}
+
+.comments__form-list {
+    padding: 0;
+
+    list-style: none;
+}
+
+.comments__form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments__input {
+    box-sizing: border-box;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+}
+
+.comments__textarea {
+    width: 100%;
+    padding: 14px;
+    padding-bottom: 18px;
+    margin-bottom: 14px;
+
+    box-sizing: border-box;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+
+    resize: none;
+
+    transition: border .2s linear;
+    outline: none;
+}
+
+.comments__btn {
+    width: 100%;
+    padding: 8px 15px 12px;
+
+    background-color: #fb565a;
+
+    @media (min-width: $desktop-width) {
+        width: auto;
+    }
+}

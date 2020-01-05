@@ -1,0 +1,143 @@
+.basket {
+    padding: 20px 14px 22px;
+
+    background-color: #f8f7f4;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+    z-index: 100;
+
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        width: 540px;
+
+        right: 53px;
+        top: 133px;
+    }
+}
+
+.basket__table {
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    @media (min-width: $desktop-width) {}
+}
+
+.basket__table td {
+    padding: 8px 10px 16px 0;
+    vertical-align: top;
+}
+
+.basket__table .basket__delete {
+    width: 21px;
+    padding: 7px 15px 0 1px;
+}
+
+.basket__delete button {
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    &::before {
+        content: "";
+        background: url("/assets/img/svg/close.svg");
+
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+
+        border-radius: 50%;
+    }
+}
+
+.basket__table .basket__pic {
+    padding: 0 14px 15px 0;
+}
+
+
+
+.basket__price {
+    padding-left: 5px;
+}
+
+.basket__price span {
+    color: #999999;
+}
+
+.basket__value {
+    padding-left: 10px;
+}
+
+.basket__cost {
+    padding: 15px 0 14px;
+
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+
+    border-top: 1px solid #cacac7;
+}
+
+.basket__btn{
+    display: table;
+    margin-left: auto;
+    padding: 8px 15px 12px;
+
+    text-transform: none;
+    background-color: #fb565a;
+}
+
+.basket__spinner {
+    display: flex;
+    align-items: center;
+}
+
+.basket__minus,
+.basket__plus {
+    position: relative;
+
+    margin: 0;
+    height: 100%;
+    width: 15px;
+
+    &:hover {
+        background-color: #000;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        margin: -1px 0 0 -7px;
+        border-top: 2px solid #d0d0d0;
+    }
+}
+
+.basket__plus {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 14px;
+        margin: -7px 0 0 -1px;
+        border-left: 2px solid #d0d0d0;
+    }
+}
+
+.basket__count {
+    width: 20px;
+
+    border-style: none;
+    text-align: center;
+    vertical-align: middle;
+}
