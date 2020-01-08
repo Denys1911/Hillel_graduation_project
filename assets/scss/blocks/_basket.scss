@@ -3,7 +3,7 @@
 
     background-color: #f8f7f4;
     border-radius: 6px;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 
     z-index: 100;
 
@@ -35,22 +35,24 @@
 }
 
 .basket__table .basket__delete {
-    width: 21px;
-    padding: 7px 15px 0 1px;
+    padding: 0;
 }
 
 .basket__delete button {
-    padding: 0;
-
+    position: relative;
+    padding-left: 16px;
     background-color: transparent;
     border: none;
-    &::before {
-        content: "";
-        background: url("/assets/img/svg/close.svg");
 
-        display: inline-block;
-        width: 11px;
-        height: 11px;
+    &::before {
+        position: absolute;
+        left: 0;
+        content: "";
+        background: url("../../assets/img/svg/icon-close-cross.svg");
+        background-size: contain;
+        display: block;
+        width: 15px;
+        height: 15px;
 
         border-radius: 50%;
     }
