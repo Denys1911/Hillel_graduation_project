@@ -1,0 +1,154 @@
+.product {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 1rem;
+
+    @media (min-width: $desktop-width) {
+        justify-content: flex-end;
+
+        padding: 0 2rem;
+    }
+}
+
+.product__img {
+    display: block;
+
+    margin-bottom: 1rem;
+} 
+
+.product__specifications {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    font-size: 2rem;
+    box-shadow: 0 1px 2px 1px #b1b2b4;
+    background-color: #eee;
+
+    // color: #fff;
+
+}
+
+.product__description {
+    margin-bottom: 2rem;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+    }
+}
+
+.product__title {
+    font-size: 2rem;
+}
+
+.product__body {
+    @media (min-width: $desktop-width) {
+        margin-left: 4rem;
+    }
+}
+
+// .product__table {} 
+
+.product__row {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 2px;
+
+     &:nth-child(even) {
+         background-color: #eee;
+     }
+}
+
+
+.product__col {
+    &--properties {
+        width: 60%;
+    }
+
+    &--values {
+        width: 40%;
+    }
+}
+
+// .product__buy {}
+
+// .product__price {}
+
+.product__btns {
+    display: flex;
+
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 1px #b1b2b4;
+
+    @media (min-width: $desktop-width) {
+        width: 300px;
+    }
+}
+
+.product__spinner {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.product__minus,
+.product__plus {
+    position: relative;
+
+    margin: 0;
+    padding: 2px;
+    height: 100%;
+    width: 39px;
+
+    &:hover {
+        background-color: #eee;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        margin: -1px 0 0 -7px;
+        border-top: 2px solid #d0d0d0;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 40px;
+    }
+}
+
+.product__count {
+    width: 40px;
+    padding: 6px 0;
+
+    border-style: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product__plus {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 14px;
+        margin: -7px 0 0 -1px;
+        border-left: 2px solid #d0d0d0;
+    }
+}
+
+.product__btn {
+    padding: 8px 15px 12px;;
+    width: 60%;
+
+    background-color: #fb565a;
+
+    border-radius: 0 4px 4px 0;
+}
+
+

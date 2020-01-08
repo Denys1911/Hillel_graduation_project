@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/css/main.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="page-header">
+            <div class="dream-container dream-container--nav">
+                <nav class="dream-navbar">
+                    <a class="dream-navbar__brand" href="index.html">
+                        <img class="dream-navbar__logo" src="assets/img/dt-logo.png" alt="logo">
+                    </a>
+    
+                    <div class="dream-navbar__wrap-nav">
+                        <ul class="dream-navbar__nav nav">
+                            <li class="nav__item">
+                                <a class="nav__link" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Ноутбуки</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Телевизоры</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Телефоны</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="dream-navbar__wrap-cart">
+                        <ul class="dream-navbar__cart cart">
+                            <li class="cart__item">
+                                <a class="cart__link" href="#">
+                                    <svg width="15" height="15" class="cart__icon">
+                                        <use xlink:href="assets/img/svg/sprite.svg#icon-cart"></use>
+                                    </svg>
+                                    <span class="cart__text">Корзина</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="basket">
+                        <table class="basket__table">
+                            <tbody>
+                                <tr>
+                                    <td class="basket__delete">
+                                        <button><span class="visually-hidden">Удалить</span></button>
+                                    </td>
+                                    <td class="basket__pic">
+                                        <img src="assets/img/products/43lgTV.webp" width="33" height="33"
+                                            alt="Пломбир с апельсиновым джемом">
+                                    </td>
+                                    <td class="basket__name">iPhones xs</td>
+                                    <td class="basket__price">1 × <span>200 грн.</span></td>
+                                    <td class="basket__value">200 грн.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="basket__spinner">
+                                            <div class="basket__minus"></div>
+                                            <input class="basket__count" type="text" value="1">
+                                            <div class="basket__plus"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="basket__delete">
+                                        <button><span class="visually-hidden">Удалить</span></button>
+                                    </td>
+                                    <td class="basket__pic">
+                                        <img src="assets/img/products/32smgTV.webp" width="40" height="40"
+                                            alt="Клубничный пломбир с присыпкой из белого шоколада">
+                                    </td>
+                                    <td class="basket__name">Huawei P Smart +</td>
+                                    <td class="basket__price">2 × <span>300 грн.</span></td>
+                                    <td class="basket__value">600 грн.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="basket__spinner">
+                                            <div class="basket__minus"></div>
+                                            <input class="basket__count" type="text" value="1">
+                                            <div class="basket__plus"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="basket__cost" colspan="5">Итого: 750 руб.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <a class="basket__btn btn" href="#">Оформить заказ</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    
+        <main class="page-main page-main--product">
+            <section class="product">    
+                <div class="product__description">
+                    <div class="product__header">
+                        <h5 class="product__title">Ноутбук MSI GE63 9SF Raider RGB</h5>
+
+                        <img class="product__img" src="assets/img/products/legionY540.webp" alt="product item">
+                    </div> 
+
+                    <div class="product__body">
+                        <div class="product__table">
+                            <h5 class="product__specifications">Характеристии:</h5>
+
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Производитель</div>
+                                <div class="product__col product__col--values">MSI</div>
+                            </div>
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Операционная система</div>
+                                <div class="product__col product__col--values">Windows 10</div>
+                            </div>
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Тип дисплея</div>
+                                <div class="product__col product__col--values">IPS </div>
+                            </div>
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Размер дисплея в дюймах</div>
+                                <div class="product__col product__col--values">15,6</div>
+                            </div>
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Разрешение экрана</div>
+                                <div class="product__col product__col--values">1920x1080 FullHD</div>
+                            </div>
+                            <div class="product__row">
+                                <div class="product__col product__col--properties">Процессор</div>
+                                <div class="product__col product__col--values">Intel Core i7-9750H</div>
+                            </div>
+                        </div>
+        
+                        <div class="product__buy">
+                            <p class="product__price">
+                                Цена: <span class="product__price-text">990 руб.</span>
+                            </p>
+                            
+                            <div class="product__btns">
+                                <div class="product__spinner">
+                                    <div class="product__minus"></div>
+                                    <input class="product__count" type="text" value="1">
+                                    <div class="product__plus"></div>
+                                </div>
+                                <button class="product__btn btn">Купить</button>
+                            </div>
+                        </div>
+                    </div>   
+                </div>  
+            </section>
+
+            <section class="comments">
+                <h5 class="comments__title">Отзывы:</h5>
+
+                <form class="comments__form" method="post">
+                    <div class="comments__form-inner">                
+                        <ul class="comments__form-list">
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="name">Имя:</label>
+                                <input class="comments__input comments__input--name" id="name" type="text"
+                                    placeholder="Введтие ваше имя*">
+                            </li>
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="surname">E-mail:</label>
+                                <input class="comments__input comments__input--email" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
+                            </li>
+ 
+                        </ul>
+                    </div>
+
+                    <div class="comments__form-inner">
+                        <h5 class="comments__form-title">Оставьте свой отзыв:</h5>
+
+                        <textarea class="comments__textarea" name="comment"  placeholder="Ваш отзыв" readonly=""></textarea>
+                    </div>
+                
+                    <button class="comments__btn btn" type="submit">Добавить</button>
+                </form>
+            </section> 
+        </main>
+    
+        <footer class="page-footer main-footer dream-team-container">
+            <section class="social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <span class="visually-hidden">Вконтакте</span>
+                            <svg width="26" height="15" class="social__icon">
+                                <use xlink:href="assets/img/svg/sprite.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <span class="visually-hidden">Фейсбук</span>
+                            <svg width="12" height="22" class="social__icon">
+                                <use xlink:href="assets/img/svg/sprite.svg#icon-fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <span class="visually-hidden">Инстаграм</span>
+                            <svg width="21" height="21" class="social__icon">
+                                <use xlink:href="assets/img/svg/sprite.svg#icon-insta"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="social__offer">
+                    <h5 class="social__title">Давайте дружить, это выгодно!</h5>
+                    <p class="social__text">Скидка 10% для друзей из социальних сетей.</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="build/js/main.min.js"></script>
+</body>
+</html>
