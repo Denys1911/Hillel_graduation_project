@@ -159,65 +159,96 @@
         </section>
         <main class="page-main page-main--catalog">
             <aside class="filters">
-                <h2 class="visually-hidden">Фильтр товаров</h2>
+                <h2 class="filters__title-main">Фильтра товаров</h2>
                 <form class="filters__form" method="get">
                     <fieldset class="filters__fieldset filters__fieldset--price">
                         <h5 class="filters__title filters__title--price">Стоимость:</h5>
                         <ul class="filters__list filters__list--price">
-                            <li class="filters__range-controls">
-                                <div class="filters__scale">
-                                    <div class="filters__bar"></div>
-                                </div>
-                                <div class="filters__toggle filters__toggle--min"></div>
-                                <div class="filters__toggle filters__toggle--max"></div>
-                            </li>
                             <li class="filters__price-controls">
-                                <label class="filters__label-price filters__label-price--min">от <input name="min-price" type="text" value="0"></label>
-                                <label class="filters__label-price filters__label-price--max">до <input name="max-price" type="text" value="15000"></label>
+                                <label class="filters__label-price filters__label-price--min">
+                                    от
+                                    <input name="minPrice" type="number" min="0">
+                                </label>
+                                <label class="filters__label-price filters__label-price--max">
+                                    до
+                                    <input name="maxPrice" type="number" min="0">
+                                </label>
                             </li>
                         </ul>
+                        <div class="price-error-message visually-hidden"></div>
                     </fieldset>
             
                     <fieldset class="filters__fieldset filters__fieldset--grid">
-                        <h5 class="filters__title filters__title--grid">Сетка:</h5>
+                        <h5 class="filters__title filters__title--grid">Наличие:</h5>
                         <ul class="filters__list filters__list--grid">
                             <li class="filters__item-option filters__item-option--radio">
-                                <input name="type" type="radio" id="filter-adaptive" value="adaptive" class="visually-hidden filters__nput filters__input--radio" checked="checked">
-                                <label for="filter-adaptive">Адаптивная</label>
+                                <input name="availability" type="radio" id="filter-available"
+                                       value="1"
+                                       class="visually-hidden filters__nput filters__input--radio">
+                                <label for="filter-available">Есть в наличии</label>
                             </li>
                             <li class="filters__item-option filters__item-option--radio">
-                                <input name="type" type="radio" id="filter-fixed" value="fixed" class="visually-hidden filters__input filters__input--radio">
-                                <label for="filter-fixed">Фиксированная</label>
-                            </li>
-                            <li class="filters__item-option filters__item-option--radio">
-                                <input name="type" type="radio" id="filter-elastic" value="elastic" class="visually-hidden filters__input filters__input--radio">
-                                <label for="filter-elastic">Резиновая</label>
+                                <input name="availability"
+                                       type="radio"
+                                       id="filter-unavailable"
+                                       value="0"
+                                       class="visually-hidden filters__input filters__input--radio">
+                                <label for="filter-unavailable">Нет в наличии</label>
                             </li>
                         </ul>
                     </fieldset>
             
-                    <fieldset class="filters__fieldset filters__fieldset--features">
-                        <h5 class="filters__title filters__title--features">Особенности:</h5>
-                        <ul class="filters__list filters__list--features">
-                            <li class="filters__item-option">
-                                <input type="checkbox" id="filter-slider" value="slider" class="visually-hidden filters__input filter__input--checkbox">
-                                <label for="filter-slider">Слайдер</label>
+                    <fieldset class="filters__fieldset filters__fieldset--brands">
+                        <h5 class="filters__title filters__title--brands">Бренд:</h5>
+                        <ul class="filters__list filters__list--brands"></ul>
+                    </fieldset>
+
+                    <fieldset class="filters__fieldset filters__fieldset--resolution">
+                        <h5 class="filters__title filters__title--resolution">Диагональ:</h5>
+                        <ul class="filters__list filters__list--resolution"></ul>
+                    </fieldset>
+
+                    <fieldset class="filters__fieldset filters__fieldset--cpu">
+                        <h5 class="filters__title filters__title--cpu">Процессор:</h5>
+                        <ul class="filters__list filters__list--cpu">
+                            <li class="filters__item-option filters__item-option--radio">
+                                <input name="selectedCpu" type="radio" id="filter-amd"
+                                       value="AMD"
+                                       class="visually-hidden filters__input filters__input--radio">
+                                <label for="filter-amd">AMD</label>
                             </li>
-                            <li class="filters__item-option">
-                                <input type="checkbox" id="filter-advantages" value="advantages" class="visually-hidden filter__input filter__input--checkbox">
-                                <label for="filter-advantages">Блок преймуществ</label>
-                            </li>
-                            <li class="filters__item-option">
-                                <input type="checkbox" id="filter-news" value="cart" class="visually-hidden filters__input filter__input--checkbox">
-                                <label for="filter-news">Новости</label>
-                            </li>
-                            <li class="filters__item-option">
-                                <input type="checkbox" id="filter-cart" value="cart" class="visually-hidden filters__input filter__input--checkbox">
-                                <label for="filter-cart">Cart</label>
+                            <li class="filters__item-option filters__item-option--radio">
+                                <input name="selectedCpu"
+                                       type="radio"
+                                       id="filter-intel"
+                                       value="Intel"
+                                       class="visually-hidden filters__input filters__input--radio">
+                                <label for="filter-intel">Intel</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <button class="filters__btn btn" type="submit">Показать</button>
+
+                    <fieldset class="filters__fieldset filters__fieldset--sim">
+                        <h5 class="filters__title filters__title--sim">Количество симок:</h5>
+                        <ul class="filters__list filters__list--sim">
+                            <li class="filters__item-option filters__item-option--radio">
+                                <input name="selectedSim" type="radio" id="filter-1sim"
+                                       value="1"
+                                       class="visually-hidden filters__nput filters__input--radio">
+                                <label for="filter-1sim">1</label>
+                            </li>
+                            <li class="filters__item-option filters__item-option--radio">
+                                <input name="selectedSim"
+                                       type="radio"
+                                       id="filter-2sim"
+                                       value="2"
+                                       class="visually-hidden filters__input filters__input--radio">
+                                <label for="filter-2sim">2</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <input class="filters__btn btn" type="button" value="Показать">
                 </form>
             </aside>
             
@@ -251,68 +282,7 @@
                     </ul>
                 </div>
             
-                <ul class="catalog__list">
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/A40.webp" alt="Sedona">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 1</h3>
-                            <p class="catalog__text">Информационный сайт для туристов</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/legionY530.webp" alt="Pink App">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 2</h3>
-                            <p class="catalog__text">Продуктовый лендинг приложения для IOS и Android</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/note-9-black.webp" alt="Borodinski">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 3</h3>
-                            <p class="catalog__text">Сайт салона красоты. Для мужчин, да.</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/smgntbook7.webp" alt="Mishka">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 4</h3>
-                            <p class="catalog__text">Интернета магазин вязаных игрушек</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/legionY740.webp" alt="A plus">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 5</h3>
-                            <p class="catalog__text">Лендинг курсов повышения квалификации</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__item-browser"></div>
-                        <img class="catalog__img" src="assets/img/products/43smgTV.webp" alt="Кваст">
-            
-                        <div class="catalog__item-hide">
-                            <h3 class="catalog__title">Phone 6</h3>
-                            <p class="catalog__text">Промо-сайт производителя крафтого кваса</p>
-                            <a class="catalog__btn btn" href="product.html">9 900 грн</a>
-                        </div>
-                    </li>
-                </ul>
+                <ul class="catalog__list"></ul>
             
                 <nav class="pagination">
                     <ul class="pagination__list">
@@ -370,6 +340,8 @@
         </footer>
     </div>    
 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="build/js/main.min.js"></script>
 </body>
 </html>
