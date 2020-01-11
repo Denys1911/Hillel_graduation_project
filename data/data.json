@@ -8,9 +8,7 @@
         "brand": "Samsung",
         "name": "Galaxy Note 9 Black (SM-N960FZKDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 1, 
+        "sim": "1",
         "comments": ["Do not buy it"]
     },
     {
@@ -21,9 +19,7 @@
         "brand": "Samsung",
         "name": "Galaxy Note 9 Purple (SM-N960FZPDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined",
-        "sim": 2,
+        "sim": "2",
         "comments": ["Real shit"]
     },
     {
@@ -34,9 +30,7 @@
         "brand": "Samsung",
         "name": "Galaxy Note 10 Aura Red (SM-N970FZRDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined",
-        "sim": 2, 
+        "sim": "2",
         "comments": ["ПЕРВЫЙ!!"]
     },
     {
@@ -47,9 +41,7 @@
         "brand": "Samsung",
         "name": "Galaxy 10 Aura Black (SM-N975FZKDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 1,
+        "sim": "1",
         "comments": ["Real!"]
     },
     {
@@ -60,9 +52,7 @@
         "brand": "Samsung",
         "name": "Galaxy S10 Red (SM-G973FZRDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 2, 
+        "sim": "2",
         "comments": ["shit!"]
     },
     {
@@ -73,9 +63,7 @@
         "brand": "Samsung",
         "name": "Galaxy S10 White (SM-G973FZWDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined",
-        "sim": 2, 
+        "sim": "2",
         "comments": ["неплох!!"]
     },
     {
@@ -86,9 +74,7 @@
         "brand": "Samsung",
         "name": "A30 (SM-A305FZRUSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 1, 
+        "sim": "1",
         "comments": ["нормальный апарат"]
     },
     {
@@ -99,9 +85,7 @@
         "brand": "Samsung",
         "name": "A50 (SM-A505FZKQSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 2, 
+        "sim": "2",
         "comments": ["камера хорошая"]
     },
     {
@@ -112,9 +96,7 @@
         "brand": "Samsung",
         "name": "A40 (SM-A405FZKDSEK)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 2, 
+        "sim": "2",
         "comments": ["тянет игры!"]
     },
     {
@@ -125,9 +107,7 @@
         "brand": "Google",
         "name": "Pixel 4 (Oh So Orange)",
         "category": "phone",
-        "resolution": "undefined",
-        "cpu": "undefined", 
-        "sim": 1, 
+        "sim": "1",
         "comments": ["Единственный нормальный телефон!"]
     },
     {
@@ -138,9 +118,7 @@
         "brand": "Samsung",
         "name": "Full HD Smart TV (UE32N5300AUXUA)",
         "category": "TV",
-        "resolution": 32,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "32",
         "comments": ["маленький экран"]
     },
     {
@@ -151,9 +129,7 @@
         "brand": "Samsung",
         "name": "4K Smart TV (UE43NU7090UXUA)",
         "category": "TV",
-        "resolution": 43,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "43",
         "comments": ["хороший телевизор"]
     },
     {
@@ -164,9 +140,7 @@
         "brand": "Samsung",
         "name": "Full HD Smart TV (UE32N5300AUXUA)",
         "category": "TV",
-        "resolution": 43,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "43",
         "comments": []
     },
     {
@@ -177,9 +151,7 @@
         "brand": "Samsung",
         "name": "4K Smart TV (UE82RU8000UXUA)",
         "category": "TV",
-        "resolution": 82,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "82",
         "comments": ["АГОНЬ"]
     },
     {
@@ -190,9 +162,7 @@
         "brand": "Samsung",
         "name": "8K Smart TV (QE65Q900RBUXUA)",
         "category": "TV",
-        "resolution": 65,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "65",
         "comments": []
     },
     {
@@ -203,9 +173,7 @@
         "brand": "Samsung",
         "name": "4K Smart TV (UE55RU7470UXUA)",
         "category": "TV",
-        "resolution": 65,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "65",
         "comments": ["Купил маме такой же"]
     },
     {
@@ -216,9 +184,7 @@
         "brand": "LG",
         "name": "4K Smart TV (43UK6300PLB)",
         "category": "TV",
-        "resolution": 43,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "43",
         "comments": ["Not bad"]
     },
     {
@@ -229,9 +195,7 @@
         "brand": "LG",
         "name": "4K Smart TV (55SM9010PLA)",
         "category": "TV",
-        "resolution": 55,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "55",
         "comments": []
     },
     {
@@ -242,9 +206,7 @@
         "brand": "LG",
         "name": "4K Smart TV (OLED77C8PLA)",
         "category": "TV",
-        "resolution": 77,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "77",
         "comments": []
     },
     {
@@ -255,9 +217,7 @@
         "brand": "LG",
         "name": "4K Smart TV (43UK6390PLG)",
         "category": "TV",
-        "resolution": 43,
-        "cpu": "undefined",
-        "sim": "undefined", 
+        "resolution": "43",
         "comments": []
     },
     {
@@ -268,9 +228,7 @@
         "brand": "Samsung",
         "name": "Notebook 7 (NP730XBE)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i7", 
-        "sim": "undefined", 
+        "cpu": "Intel",
         "comments": []
     },
     {
@@ -281,9 +239,7 @@
         "brand": "Lenovo",
         "name": "Ideapad 330 15 (81D2006MRU)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "Ryzen 3",
-        "sim": "undefined",
+        "cpu": "Intel",
         "comments": ["сознательно снизили производительность"]
     },
     {
@@ -294,9 +250,7 @@
         "brand": "Lenovo",
         "name": "Legion Y540 15 (81SY007CPB)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i5",
-        "sim": "undefined", 
+        "cpu": "Intel",
         "comments": ["Не совсем удачная модель на мой взгляд"]
     },
     {
@@ -307,9 +261,7 @@
         "brand": "Lenovo",
         "name": "IdeaPad L340 15 Gaming (81LK009XRK )",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i5",
-        "sim": "undefined",
+        "cpu": "AMD",
         "comments": ["Если вы понимаете ЗАЧЕМ вам такой ноутбук, то вы будете счастливы."]
     },
     {
@@ -320,9 +272,7 @@
         "brand": "Lenovo",
         "name": "Legion Y530 (81FV015QRA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i9",
-        "sim": "undefined",
+        "cpu": "AMD",
         "comments": ["отличная модель, очень понравилось"]
     },
     {
@@ -333,9 +283,7 @@
         "brand": "Lenovo",
         "name": " IdeaPad S340 15 (81NE00C5RA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i7",
-        "sim": "undefined",
+        "cpu": "AMD",
         "comments": ["НЕ БРАТЬ!!!!!!"]
     },
     {
@@ -346,9 +294,7 @@
         "brand": "Lenovo",
         "name": " IdeaPad S540 14 (81NH0050RA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "Ryzen 7",
-        "sim": "undefined", 
+        "cpu": "AMD",
         "comments": ["хорошая модель, понравилось"]
     },
     {
@@ -359,9 +305,7 @@
         "brand": "Lenovo",
         "name": "Ideapad C340 14 (81N6005TRA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "Ryzen 3",
-        "sim": "undefined",
+        "cpu": "Intel",
         "comments": ["Идеальная модель, кроме wifi"]
     },
     {
@@ -372,9 +316,7 @@
         "brand": "Lenovo",
         "name": "Legion Y740 17 (81UJ0054RA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "i7",
-        "sim": "undefined", 
+        "cpu": "AMD",
         "comments": ["тянет все игры!"]
     },
     {
@@ -385,9 +327,7 @@
         "brand": "Lenovo",
         "name": "IdeaPad S145 15 (81MV00L5RA)",
         "category": "laptop",
-        "resolution": "undefined",
-        "cpu": "Celeron",
-        "sim": "undefined", 
+        "cpu": "Intel",
         "comments": ["Топ ноут"]
     }
 ]
