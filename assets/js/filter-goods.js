@@ -23,7 +23,6 @@ const filterGoods = goodsData => {
         }
 
         goodsCards.each(showGoodsOnPageAccordingToFilters);
-        form[0].reset();
 
         function createObjWithFilterValues() {
             const filtersValues = {
@@ -56,8 +55,8 @@ const filterGoods = goodsData => {
             const {price, available, brand, resolution, sim, cpu} = goodsCardData;
             const {minPrice, maxPrice, availability, selectedBrands, selectedResolutions,
                 selectedCpu, selectedSim} = filtersValues;
-            const checkMinPrice = minPrice ? price > minPrice : true;
-            const checkMaxPrice = maxPrice ? price < maxPrice : true;
+            const checkMinPrice = minPrice ? price >= minPrice : true;
+            const checkMaxPrice = maxPrice ? price <= maxPrice : true;
             const checkAvailability = availability ? Boolean(+availability) === available : true;
             const checkBrand = selectedBrands.length ? selectedBrands.includes(brand) : true;
             const checkResolution = selectedResolutions.length ? selectedResolutions.includes(resolution) : true;
