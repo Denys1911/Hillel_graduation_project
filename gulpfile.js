@@ -33,6 +33,10 @@ gulp.task('scss', () => {
 
 gulp.task('js', () => {
     return gulp.src([
+        'assets/js/get-goods-data.js',
+        'assets/js/show-goods.js',
+        'assets/js/show-filters.js',
+        'assets/js/filter-goods.js',
         'assets/js/app.js',
     ])
         .pipe(concat('main.min.js'))
