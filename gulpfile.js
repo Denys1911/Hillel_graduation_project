@@ -43,8 +43,9 @@ gulp.task('js', () => {
         'assets/js/app.js',
     ])
         .pipe(concat('main.min.js'))
-        .pipe(gulp.dest('build/js/'))
+        .pipe((gulp.dest('build/js')))
         .pipe(webpackStream({
+            devtool: 'source-map',
             output: {
                 filename: 'main.min.js',
             },
@@ -64,7 +65,7 @@ gulp.task('js', () => {
                 ]
             }
         }))
-        .pipe((gulp.dest('build/js/')))
+        .pipe((gulp.dest('build/js')))
         .pipe(browserSync.reload({stream: true}));
 });
 
