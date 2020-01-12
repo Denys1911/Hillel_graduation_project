@@ -1,4 +1,4 @@
-function showCart (goodsData, dataItemId, goodsInCartData) {
+function showCartWithGoods (dataItemId, goodsInCartData) {
     $(".basket").removeClass("hide");
     if (dataItemId) {
         if (goodsInCartData) {

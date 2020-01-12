@@ -37,7 +37,7 @@ gulp.task('js', () => {
         'assets/js/mainEventHandler.js',
         'assets/js/show-goods-all.js',
         'assets/js/show-goods-item.js',
-        'assets/js/show-cart.js',
+        'assets/js/show-cart-with-goods.js',
         'assets/js/show-filters.js',
         'assets/js/filter-goods.js',
         'assets/js/app.js',

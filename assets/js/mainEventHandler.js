@@ -20,7 +20,7 @@ function mainEventHandler(event) {
         case 'add':
         case 'show_cart':
             //add to cart function;
-            showCart(goodsData, buyBtnItemId, goodsInCartData);
+            showCartWithGoods(buyBtnItemId, goodsInCartData);
             //они будут работать вместе, т.к. мы показываем корзину каждый раз когда добавляем товар в нее
             break;
         case 'remove':

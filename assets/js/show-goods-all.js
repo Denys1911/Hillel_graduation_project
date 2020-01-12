@@ -5,13 +5,35 @@ const showGoodsOnMainAndCategoryPage = (goodsData, category) => {
     $("section.comments").addClass("hide");
     // clear previos goods
     $("li.catalog__item").remove();
+
     $(".carousel").removeClass("hide");
     $("section.catalog").removeClass("hide");
     $("aside.filters").removeClass("hide");
+    $(".page-title-name").removeClass("hide");
     // add special data attr for filter block
     $("aside.filters").attr("data-current-category", category);
+    $(".sort").attr("data-current-category", category);
     // clear filters when category is choosen
     $(".filters__form").trigger("reset");
+
+    // page name title
+    let pageTitleName = $(".page-title-name");
+    switch (category) {
+        case "laptop":
+            pageTitleName.text("НОУТБУКИ");
+            break;
+        case "TV":
+            pageTitleName.text("ТЕЛЕВИЗОРЫ");
+            break;
+        case "phone":
+            pageTitleName.text("ТЕЛЕФОНЫ");
+            break;
+        default:
+            pageTitleName.text("ВСЕ ТОВАРЫ");
+            break;
+    }
+
+
     goodsData.forEach(good => {
         if (category && good.category !== category) {
             return;

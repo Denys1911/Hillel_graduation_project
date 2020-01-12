@@ -61,6 +61,13 @@ body {
     line-height: 1;
 }
 
+.page-title-name {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+}
+
 .page-main {
     &--catalog {
         display: flex;

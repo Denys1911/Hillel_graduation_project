@@ -11,6 +11,7 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     $("section.catalog").addClass("hide");
     $("aside.filters").addClass("hide");
     $(".carousel").addClass("hide");
+    $(".page-title-name").addClass("hide");
 
     // show product and comments
     $("section.product").removeClass("hide");
@@ -42,8 +43,13 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
 
     // need update data.json objects to new format like
     // comments: [{"user": "Vasya", "text": "Lorem ipsum"}, {"user": "Alex", "text": "HAHAHAHA"}]
-    newItem.comments.forEach(comment => {
-        let newComment = $(`<li>${comment.user} left comment: <br /> "${comment}"</li>`);
-        $(".comments__left ul").append(newComment);
-    })
+    if (newItem.comments.length > 0) {
+        newItem.comments.forEach(comment => {
+            let newComment = $(`<li>${comment.user} left comment: <br /> "${comment.text}"</li>`);
+            $(".comments__left ul").append(newComment);
+        })
+    } else {
+        $(".comments__left ul").append($(`<li>Новых комментариев нет.<br />Оставьте свой первым</li>`));
+    }
+
 }

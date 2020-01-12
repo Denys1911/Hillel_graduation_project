@@ -9,7 +9,10 @@
         "name": "Galaxy Note 9 Black (SM-N960FZKDSEK)",
         "category": "phone",
         "sim": "1",
-        "comments": ["Do not buy it"]
+        "comments": [{
+            "user": "Bingo Bongo",
+            "text": "Do not buy it"
+        }]
     },
     {
         "id": 100002,
@@ -20,7 +23,14 @@
         "name": "Galaxy Note 9 Purple (SM-N960FZPDSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["Real shit"]
+        "comments": [{
+            "user": "Pervert",
+            "text": "Real shit"
+        },
+        {
+            "user": "asdasdasd",
+            "text": "HAHAHHAH"
+        }]
     },
     {
         "id": 100003,
@@ -31,7 +41,10 @@
         "name": "Galaxy Note 10 Aura Red (SM-N970FZRDSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["ПЕРВЫЙ!!"]
+        "comments": [{
+            "user": "Darth Vader",
+            "text": "ПЕРВЫЙ!!"
+        }]
     },
     {
         "id": 100004,
@@ -42,7 +55,10 @@
         "name": "Galaxy 10 Aura Black (SM-N975FZKDSEK)",
         "category": "phone",
         "sim": "1",
-        "comments": ["Real!"]
+        "comments": [{
+            "user": "Santa",
+            "text": "Real!"
+        }]
     },
     {
         "id": 100005,
@@ -53,7 +69,10 @@
         "name": "Galaxy S10 Red (SM-G973FZRDSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["shit!"]
+        "comments": [{
+            "user": "Harasho",
+            "text": "shit!"
+        }]
     },
     {
         "id": 100006,
@@ -64,7 +83,10 @@
         "name": "Galaxy S10 White (SM-G973FZWDSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["неплох!!"]
+        "comments": [{
+            "user": "Korean customer",
+            "text": "неплох!!"
+        }]
     },
     {
         "id": 100007,
@@ -75,7 +97,10 @@
         "name": "A30 (SM-A305FZRUSEK)",
         "category": "phone",
         "sim": "1",
-        "comments": ["нормальный апарат"]
+        "comments": [{
+            "user": "Gogol",
+            "text": "нормальный апарат"
+        }]
     },
     {
         "id": 100008,
@@ -86,7 +111,10 @@
         "name": "A50 (SM-A505FZKQSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["камера хорошая"]
+        "comments": [{
+            "user": "Volt",
+            "text": "камера хорошая"
+        }]
     },
     {
         "id": 100009,
@@ -97,7 +125,10 @@
         "name": "A40 (SM-A405FZKDSEK)",
         "category": "phone",
         "sim": "2",
-        "comments": ["тянет игры!"]
+        "comments": [{
+            "user": "Tito",
+            "text": "тянет игры!"
+        }]
     },
     {
         "id": 100010,
@@ -108,7 +139,10 @@
         "name": "Pixel 4 (Oh So Orange)",
         "category": "phone",
         "sim": "1",
-        "comments": ["Единственный нормальный телефон!"]
+        "comments": [{
+            "user": "Molly",
+            "text": "Единственный нормальный телефон!"
+        }]
     },
     {
         "id": 200001,
@@ -119,7 +153,10 @@
         "name": "Full HD Smart TV (UE32N5300AUXUA)",
         "category": "TV",
         "resolution": "32",
-        "comments": ["маленький экран"]
+        "comments": [{
+            "user": "asdasdasd",
+            "text": "маленький экран"
+        }]
     },
     {
         "id": 200002,
@@ -130,7 +167,10 @@
         "name": "4K Smart TV (UE43NU7090UXUA)",
         "category": "TV",
         "resolution": "43",
-        "comments": ["хороший телевизор"]
+        "comments": [{
+            "user": "bgsdaw",
+            "text": "хороший телевизор"
+        }]
     },
     {
         "id": 200003,
@@ -152,7 +192,10 @@
         "name": "4K Smart TV (UE82RU8000UXUA)",
         "category": "TV",
         "resolution": "82",
-        "comments": ["АГОНЬ"]
+        "comments": [{
+            "user": "Nerd",
+            "text": "АГОНЬ"
+        }]
     },
     {
         "id": 200005,
@@ -174,7 +217,10 @@
         "name": "4K Smart TV (UE55RU7470UXUA)",
         "category": "TV",
         "resolution": "65",
-        "comments": ["Купил маме такой же"]
+        "comments": [{
+            "user": "vasya",
+            "text":"Купил маме такой же"
+            }]
     },
     {
         "id": 200007,
@@ -185,7 +231,10 @@
         "name": "4K Smart TV (43UK6300PLB)",
         "category": "TV",
         "resolution": "43",
-        "comments": ["Not bad"]
+        "comments": [{
+            "user": "Alex",
+            "text": "Not bad"
+            }]
     },
     {
         "id": 200008,
@@ -240,7 +289,10 @@
         "name": "Ideapad 330 15 (81D2006MRU)",
         "category": "laptop",
         "cpu": "Intel",
-        "comments": ["сознательно снизили производительность"]
+        "comments": [{
+            "user": "Connor McGregor",
+            "text": "сознательно снизили производительность"
+        }]
     },
     {
         "id": 300003,
@@ -251,7 +303,10 @@
         "name": "Legion Y540 15 (81SY007CPB)",
         "category": "laptop",
         "cpu": "Intel",
-        "comments": ["Не совсем удачная модель на мой взгляд"]
+        "comments": [{
+            "user": "Жорик",
+            "text": "Не совсем удачная модель на мой взгляд"
+        }]
     },
     {
         "id": 300004,
@@ -262,7 +317,10 @@
         "name": "IdeaPad L340 15 Gaming (81LK009XRK )",
         "category": "laptop",
         "cpu": "AMD",
-        "comments": ["Если вы понимаете ЗАЧЕМ вам такой ноутбук, то вы будете счастливы."]
+        "comments": [{
+            "user": "Олесь",
+            "text": "Если вы понимаете ЗАЧЕМ вам такой ноутбук, то вы будете счастливы."
+        }]
     },
     {
         "id": 300005,
@@ -273,7 +331,10 @@
         "name": "Legion Y530 (81FV015QRA)",
         "category": "laptop",
         "cpu": "AMD",
-        "comments": ["отличная модель, очень понравилось"]
+        "comments": [{
+            "user": "Javanshir",
+            "text": "отличная модель, очень понравилось"
+        }]
     },
     {
         "id": 300006,
@@ -284,7 +345,10 @@
         "name": " IdeaPad S340 15 (81NE00C5RA)",
         "category": "laptop",
         "cpu": "AMD",
-        "comments": ["НЕ БРАТЬ!!!!!!"]
+        "comments": [{
+            "user": "Zhao Zing",
+            "text": "НЕ БРАТЬ!!!!!!"
+        }]
     },
     {
         "id": 300007,
@@ -295,7 +359,10 @@
         "name": " IdeaPad S540 14 (81NH0050RA)",
         "category": "laptop",
         "cpu": "AMD",
-        "comments": ["хорошая модель, понравилось"]
+        "comments": [{
+            "user": "R2d2",
+            "text": "хорошая модель, понравилось"
+        }]
     },
     {
         "id": 300008,
@@ -306,7 +373,10 @@
         "name": "Ideapad C340 14 (81N6005TRA)",
         "category": "laptop",
         "cpu": "Intel",
-        "comments": ["Идеальная модель, кроме wifi"]
+        "comments": [{
+            "user": "Mr Bin",
+            "text": "Идеальная модель, кроме wifi"
+        }]
     },
     {
         "id": 300009,
@@ -317,7 +387,10 @@
         "name": "Legion Y740 17 (81UJ0054RA)",
         "category": "laptop",
         "cpu": "AMD",
-        "comments": ["тянет все игры!"]
+        "comments": [{
+            "user": "anon436",
+            "text": "тянет все игры!"
+        }]
     },
     {
         "id": 300010,
@@ -328,7 +401,9 @@
         "name": "IdeaPad S145 15 (81MV00L5RA)",
         "category": "laptop",
         "cpu": "Intel",
-        "comments": ["Топ ноут"]
+        "comments": [{
+            "user": "asdasdasd",
+            "text": "Топ ноут"
+            }]
     }
 ]
-    
