@@ -35,7 +35,8 @@ gulp.task('js', () => {
     return gulp.src([
         'assets/js/get-goods-data.js',
         'assets/js/mainEventHandler.js',
-        'assets/js/show-goods-all.js',
+        'assets/js/showMainAndCategoryPage.js',
+        'assets/js/renderGoods.js',
         'assets/js/show-goods-item.js',
         'assets/js/show-cart-with-goods.js',
         'assets/js/show-filters.js',

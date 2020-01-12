@@ -1,26 +1,25 @@
 function mainEventHandler(event) {
-    let goodsData = event.data.all_goods;
-    let goodsInCartData = event.data.goods_in_cart;
-    let dataInfo = event.target.dataset.info;
-    let imgItemId = parseInt($(event)[0].target.offsetParent.dataset.itemId); // this dataset params will be unique on each product item element
-    let buyBtnItemId = parseInt(event.target.dataset.itemId);
+    const {goodsData, goodsInCartData} = event.data;
+    const target = event.target;
+    let dataInfo = target.dataset.info;
+    let itemId = parseInt(target.dataset.itemId);
     // when click isn't on basket element, basket should be hidden
-    if (!(event.target.className).includes("basket")) {
+    if (!(target.className).includes("basket")) {
         $(".basket").addClass("hide");
     }
     switch (dataInfo) {
         case 'home':
-            showGoodsOnMainAndCategoryPage(goodsData) // to render all items
+            showMainAndCategoryPage(goodsData) // to render all items
             break;
         case 'laptop':
         case 'phone':
         case 'TV':
-            showGoodsOnMainAndCategoryPage(goodsData, dataInfo); // to render certain category items
+            showMainAndCategoryPage(goodsData, dataInfo); // to render certain category items
             break;
         case 'add':
         case 'show_cart':
             //add to cart function;
-            showCartWithGoods(buyBtnItemId, goodsInCartData);
+            showCartWithGoods(itemId, goodsInCartData);
             //они будут работать вместе, т.к. мы показываем корзину каждый раз когда добавляем товар в нее
             break;
         case 'remove':
@@ -33,7 +32,7 @@ function mainEventHandler(event) {
             //decrease q-ty of item in cart function;
             break;
         case 'show_product':
-            showGoodsOnItemPage(goodsData, imgItemId);
+            showGoodsOnItemPage(goodsData, itemId);
             break;
         //TO-DO: need also add events for filter and sorting
     }

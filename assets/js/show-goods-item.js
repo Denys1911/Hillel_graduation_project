@@ -8,14 +8,10 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     });
 
     // hide slider, filters and categories
-    $("section.catalog").addClass("hide");
-    $("aside.filters").addClass("hide");
-    $(".carousel").addClass("hide");
-    $(".page-title-name").addClass("hide");
+    $("section.catalog, aside.filters, .carousel, .page-title-name").addClass("hide");
 
     // show product and comments
-    $("section.product").removeClass("hide");
-    $("section.comments").removeClass("hide");
+    $("section.product, section.comments").removeClass("hide");
 
     // clear previous products data
     $(".product__row").remove();
@@ -41,8 +37,6 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
 
     $("button.comments__btn").attr("data-item-id", `${newItem.id}`)
 
-    // need update data.json objects to new format like
-    // comments: [{"user": "Vasya", "text": "Lorem ipsum"}, {"user": "Alex", "text": "HAHAHAHA"}]
     if (newItem.comments.length > 0) {
         newItem.comments.forEach(comment => {
             let newComment = $(`<li>${comment.user} left comment: <br /> "${comment.text}"</li>`);
