@@ -9,6 +9,12 @@
 
 }
 
+main[data-current-category] {
+    .filters__fieldset--resolution, .filters__fieldset--sim, .filters__fieldset--cpu {
+        display: none;
+    }
+}
+
 main[data-current-category="laptop"] {
     .filters__fieldset--resolution, .filters__fieldset--sim {
         display: none;
