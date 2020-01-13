@@ -14,83 +14,41 @@
         <header class="page-header">
             <div class="dream-container dream-container--nav">
                 <nav class="dream-navbar">
-                    <a class="dream-navbar__brand" href="#">         
+                    <a class="dream-navbar__brand" href="#">
                         <img class="dream-navbar__logo" src="assets/img/dt-logo.png" alt="logo">
                     </a>
 
                     <div class="dream-navbar__wrap-nav">
                         <ul class="dream-navbar__nav nav">
                             <li class="nav__item">
-                                <a class="nav__link" href="index.html">Главная</a>
+                                <a class="nav__link" href="#" data-info="home">Главная</a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#">Ноутбуки</a>
+                                <a class="nav__link" href="#" data-info="laptop">Ноутбуки</a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#">Телевизоры</a>
+                                <a class="nav__link" href="#" data-info="TV">Телевизоры</a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#">телефоны</a>
+                                <a class="nav__link" href="#" data-info="phone">телефоны</a>
                             </li>
                         </ul>
                     </div>
                     <div class="dream-navbar__wrap-cart">
                         <ul class="dream-navbar__cart cart">
                             <li class="cart__item">
-                                <a class="cart__link" href="#">
-                                    <svg width="15" height="15" class="cart__icon">
-                                        <use xlink:href="assets/img/svg/sprite.svg#icon-cart"></use>
+                                <a class="cart__link" href="#"  data-info="show_cart">
+                                    <svg width="15" height="15" class="cart__icon"  data-info="show_cart">
+                                        <use xlink:href="assets/img/svg/sprite.svg#icon-cart"  data-info="show_cart"></use>
                                     </svg>
-                                    <span class="cart__text">Корзина</span>
+                                    <span class="cart__text"  data-info="show_cart">Корзина</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="basket">
+                    <div class="basket hide">
                         <table class="basket__table">
                             <tbody>
-                                <tr>
-                                    <td class="basket__delete">
-                                        <button>Удалить</button>
-                                    </td>
-                                    <td class="basket__pic">
-                                        <img src="assets/img/products/43lgTV.webp" width="33" height="33"
-                                            alt="Пломбир с апельсиновым джемом">
-                                    </td>
-                                    <td class="basket__name">iPhones xs</td>
-                                    <td class="basket__price">1 × <span>200 грн.</span></td>
-                                    <td class="basket__value">200 грн.</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="basket__spinner">
-                                            <div class="basket__minus"></div>
-                                            <input class="basket__count" type="text" value="1">
-                                            <div class="basket__plus"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="basket__delete">
-                                        <button>Удалить</button>
-                                    </td>
-                                    <td class="basket__pic">
-                                        <img src="assets/img/products/32smgTV.webp" width="40" height="40"
-                                            alt="Клубничный пломбир с присыпкой из белого шоколада">
-                                    </td>
-                                    <td class="basket__name">Huawei P Smart +</td>
-                                    <td class="basket__price">2 × <span>300 грн.</span></td>
-                                    <td class="basket__value">600 грн.</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="basket__spinner">
-                                            <div class="basket__minus"></div>
-                                            <input class="basket__count" type="text" value="1">
-                                            <div class="basket__plus"></div>
-                                        </div>
-                                    </td>
-                                </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -122,8 +80,8 @@
                         <svg class="carousel__icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 26">
                             <title>huge-arrow-right</title>
                             <polygon points="0 11 42.34 11 34.17 2.83 36.99 0 50 13 50 13 50 13.01 36.99 26 34.17 23.18 42.34 15 0 15 0 11"/>
-                        </svg>                              
-                    </button> 
+                        </svg>
+                    </button>
                 </div>
                 <div class="carousel__item">
                     <img class="carousel__img" src="assets/img/products/82smgTV.webp">
@@ -137,8 +95,8 @@
                         <svg class="carousel__icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 26">
                             <title>huge-arrow-right</title>
                             <polygon points="0 11 42.34 11 34.17 2.83 36.99 0 50 13 50 13 50 13.01 36.99 26 34.17 23.18 42.34 15 0 15 0 11"/>
-                        </svg> 
-                    </button> 
+                        </svg>
+                    </button>
                 </div>
                 <div class="carousel__item">
                     <img class="carousel__img" src="assets/img/products/ideapadC340.webp">
@@ -152,11 +110,12 @@
                         <svg class="carousel__icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 26">
                             <title>huge-arrow-right</title>
                             <polygon points="0 11 42.34 11 34.17 2.83 36.99 0 50 13 50 13 50 13.01 36.99 26 34.17 23.18 42.34 15 0 15 0 11"/>
-                        </svg> 
+                        </svg>
                     </button>
                 </div>
             </div>
         </section>
+        <div class="page-title-name"></div>
         <main class="page-main page-main--catalog">
             <aside class="filters">
                 <h2 class="filters__title-main">Фильтра товаров</h2>
@@ -177,7 +136,7 @@
                         </ul>
                         <div class="price-error-message visually-hidden"></div>
                     </fieldset>
-            
+
                     <fieldset class="filters__fieldset filters__fieldset--grid">
                         <h5 class="filters__title filters__title--grid">Наличие:</h5>
                         <ul class="filters__list filters__list--grid">
@@ -197,7 +156,7 @@
                             </li>
                         </ul>
                     </fieldset>
-            
+
                     <fieldset class="filters__fieldset filters__fieldset--brands">
                         <h5 class="filters__title filters__title--brands">Бренд:</h5>
                         <ul class="filters__list filters__list--brands"></ul>
@@ -251,7 +210,7 @@
                     <input class="filters__btn btn" type="button" value="Показать">
                 </form>
             </aside>
-            
+
             <section class="catalog">
                 <div class="catalog__sort sort">
                     <p class="sort__text">Сортировать:</p>
@@ -267,7 +226,7 @@
                             <a href="#" class="sort__link">По названию</a>
                         </li>
                     </ul>
-                    
+
                     <ul class="sort__toggle">
                         <li class="sort__toggle-item">
                             <a href="#" class="sort__toggle-link sort__toggle-link--down sort__toggle-link--current">
@@ -281,9 +240,9 @@
                         </li>
                     </ul>
                 </div>
-            
+
                 <ul class="catalog__list"></ul>
-            
+
                 <nav class="pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item pagination__item">
@@ -299,8 +258,72 @@
                             <a class="pagination__link pagination__link--next" href="#">Следующая</a>
                         </li>
                     </ul>
-                </nav>  
+                </nav>
             </section>
+
+            <section class="product hide">
+                <div class="product__description">
+                    <div class="product__header">
+                        <h5 class="product__title"></h5>
+
+                        <img class="product__img" src="assets/img/products/legionY540.webp" alt="product item">
+                    </div>
+
+                    <div class="product__body">
+                        <div class="product__table">
+                            <h5 class="product__specifications">Характеристии:</h5>
+                        </div>
+
+                        <div class="product__buy">
+                            <p class="product__price">
+                                Цена: <span class="product__price-text"></span>
+                            </p>
+
+                            <div class="product__btns">
+                                <div class="product__spinner">
+                                    <div class="product__minus"></div>
+                                    <input class="product__count" type="text" value="1">
+                                    <div class="product__plus"></div>
+                                </div>
+                                <button class="product__btn btn">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="comments hide">
+                <h5 class="comments__title">Отзывы:</h5>
+
+                <div class="comments__left">
+                    <ul></ul>
+                </div>
+                <form class="comments__form" method="post">
+                    <div class="comments__form-inner">
+                        <ul class="comments__form-list">
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="name">Имя:</label>
+                                <input class="comments__input comments__input--name" id="name" type="text"
+                                    placeholder="Введтие ваше имя*">
+                            </li>
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="surname">E-mail:</label>
+                                <input class="comments__input comments__input--email" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="comments__form-inner">
+                        <h5 class="comments__form-title">Оставьте свой отзыв:</h5>
+
+                        <textarea class="comments__textarea" name="comment"  placeholder="Ваш отзыв" readonly=""></textarea>
+                    </div>
+
+                    <button class="comments__btn btn" type="submit">Добавить</button>
+                </form>
+            </section>
+
         </main>
 
         <footer class="page-footer dream-team-container">
@@ -338,7 +361,7 @@
                 </div>
             </section>
         </footer>
-    </div>    
+    </div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

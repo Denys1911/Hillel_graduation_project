@@ -1,11 +1,11 @@
 (async function() {
-    const GOODS_STORAGE_NAME = 'all-goods';
-    const CART_STORAGE_NAME = 'goods-in-cart';
+    const GOODS_STORAGE_NAME = 'all_goods';
+    const CART_STORAGE_NAME = 'goods_in_cart';
     let goodsData = await getGoodsData(GOODS_STORAGE_NAME);
-    let goodsInCartData;
+    let goodsInCartData = await getGoodsData(CART_STORAGE_NAME);
 
-    showGoodsOnMainPage(goodsData);
+    $("body").on("click", {goodsData, goodsInCartData} ,mainEventHandler);
+    showMainAndCategoryPage(goodsData);
     showBrandFilter(goodsData);
     showResolutionsFilter(goodsData);
-    filterGoods(goodsData);
 })();

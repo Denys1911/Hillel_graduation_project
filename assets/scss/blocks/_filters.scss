@@ -9,6 +9,28 @@
 
 }
 
+main[data-current-category="laptop"] {
+    .filters__fieldset--resolution, .filters__fieldset--sim {
+        display: none;
+    }
+}
+
+main[data-current-category="TV"] {
+    .filters__fieldset--cpu, .filters__fieldset--sim {
+        display: none;
+    }
+}
+
+main[data-current-category="phone"] {
+    .filters__fieldset--cpu, .filters__fieldset--resolution {
+        display: none;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
 .filters__fieldset  {
     margin: 0;
     padding: 0;
@@ -18,14 +40,14 @@
     &--price {
         margin-bottom: 2rem;
 
-        @media (min-width: $desktop-width) {   
+        @media (min-width: $desktop-width) {
             margin-bottom: 3rem;
         }
     }
     &--grid {
         margin-bottom: 2rem;
 
-        @media (min-width: $desktop-width) {   
+        @media (min-width: $desktop-width) {
             margin-bottom: 3rem;
         }
     }
@@ -36,7 +58,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
 
-        @media (min-width: $desktop-width) {   
+        @media (min-width: $desktop-width) {
             margin-bottom: 3rem;
         }
     }
@@ -58,14 +80,14 @@
     &--price {
         margin-bottom: 1rem;
 
-        @media (min-width: $desktop-width) {   
+        @media (min-width: $desktop-width) {
             margin-bottom: 2rem;
         }
     }
     &--grid {
         margin-bottom: 1rem;
 
-        @media (min-width: $desktop-width) {    
+        @media (min-width: $desktop-width) {
             margin-bottom: 1.8rem;
         }
     }
@@ -75,7 +97,7 @@
     &--cpu {
         margin-bottom: 1rem;
 
-        @media (min-width: $desktop-width) {   
+        @media (min-width: $desktop-width) {
             margin-bottom: 1.8rem;
         }
     }

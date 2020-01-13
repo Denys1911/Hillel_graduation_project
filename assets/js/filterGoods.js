@@ -4,7 +4,7 @@ const filterGoods = goodsData => {
     const goodsCards = $('.catalog__item');
 
     filtersSubmitBtn.on('click', handleClickOnFilterSubmitBtn);
-    
+
     function handleClickOnFilterSubmitBtn(e) {
         const filtersValues = createObjWithFilterValues();
         const errorMessage = $('.price-error-message');
@@ -50,7 +50,7 @@ const filterGoods = goodsData => {
         }
 
         function showGoodsOnPageAccordingToFilters()  {
-            const goodsId = parseInt(this.dataset.id);
+            const goodsId = parseInt(this.dataset.itemId);
             const goodsCardData = goodsData.find(item => item.id === goodsId);
             const {price, available, brand, resolution, sim, cpu} = goodsCardData;
             const {minPrice, maxPrice, availability, selectedBrands, selectedResolutions,
