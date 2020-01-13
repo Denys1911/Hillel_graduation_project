@@ -116,7 +116,7 @@
             </div>
         </section>
         <div class="page-title-name"></div>
-        <main class="page-main page-main--catalog">
+        <main class="page-main page-main--catalog" data-current-sort="price" data-current-sort-direction="descending">
             <aside class="filters">
                 <h2 class="filters__title-main">Фильтра товаров</h2>
                 <form class="filters__form" method="get">
@@ -212,33 +212,22 @@
             </aside>
 
             <section class="catalog">
-                <div class="catalog__sort sort">
+                <div class="sort">
                     <p class="sort__text">Сортировать:</p>
-
-                    <ul class="sort__list">
-                        <li class="sort__item">
-                            <a href="#" class="sort__link sort__link--current">По цене</a>
-                        </li>
-                        <li class="sort__item">
-                            <a href="#" class="sort__link">По типу</a>
-                        </li>
-                        <li class="sort__item">
-                            <a href="#" class="sort__link">По названию</a>
-                        </li>
-                    </ul>
-
-                    <ul class="sort__toggle">
-                        <li class="sort__toggle-item">
-                            <a href="#" class="sort__toggle-link sort__toggle-link--down sort__toggle-link--current">
-                                <span class="visually-hidden">Вниз</span>
-                            </a>
-                        </li>
-                        <li class="sort__toggle-item">
-                            <a href="#" class="sort__toggle-link sort__toggle-link--up">
-                                <span class="visually-hidden">Вверх</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="sort__wrapper">
+                        <ul class="sort__list">
+                            <li class="sort__item" data-info="price">
+                                По цене
+                            </li>
+                            <li class="sort__item" data-info="popularity">
+                                По популярности
+                            </li>
+                        </ul>
+                        <ul class="sort__toggle">
+                            <li class="sort__toggle-item sort__toggle-item--down" data-info="descending"></li>
+                            <li class="sort__toggle-item sort__toggle-item--up" data-info="ascending"></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <ul class="catalog__list"></ul>
