@@ -1,8 +1,9 @@
 function mainEventHandler(event) {
     const {goodsData, goodsInCartData} = event.data;
     const target = event.target;
-    let dataInfo = target.dataset.info;
-    let itemId = parseInt(target.dataset.itemId);
+    const dataInfo = target.dataset.info;
+    const itemId = parseInt(target.dataset.itemId);
+    const mainBlock = $('main');
     // when click isn't on basket element, basket should be hidden
 
     if (!(target.className).includes("basket")) {
@@ -38,5 +39,14 @@ function mainEventHandler(event) {
             break;
         case 'filter_btn':
             filterGoods(goodsData);
+            break;
+        case 'price':
+        case 'popularity':
+            mainBlock.attr('data-current-sort', dataInfo);
+            break;
+        case 'descending':
+        case 'ascending':
+            mainBlock.attr('data-current-sort-direction', dataInfo);
+            break;
     }
 }
