@@ -1,10 +1,7 @@
-function renderGoods (goodsData, category) {
+const renderGoods = goodsData => {
     const catalogList = $('.catalog__list');
 
     goodsData.forEach(good => {
-        if (category && good.category !== category) {
-            return;
-        }
         const {id, img, name, brand, price, available} = good;
         const availableMessage = '<span class="catalog__text--available">(Есть в наличии)</span>';
         const unavailableMessage = '<span class="catalog__text--unavailable">(Нет в наличии)</span>';
@@ -24,4 +21,4 @@ function renderGoods (goodsData, category) {
             </li>
         `);
     });
-}
+};
