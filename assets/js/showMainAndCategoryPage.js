@@ -1,5 +1,4 @@
 const showMainAndCategoryPage = (goodsData, category) => {
-
     $("section.product, section.comments").addClass("hide");
     $("li.catalog__item").remove();
     $(".carousel, section.catalog, aside.filters, .page-title-name").removeClass("hide");
@@ -30,5 +29,4 @@ const showMainAndCategoryPage = (goodsData, category) => {
     }
 
     renderGoods(goodsData, category);
-    filterGoods(goodsData);
 };

@@ -1,5 +1,6 @@
 function renderGoods (goodsData, category) {
     const catalogList = $('.catalog__list');
+
     goodsData.forEach(good => {
         if (category && good.category !== category) {
             return;

@@ -4,12 +4,14 @@ function mainEventHandler(event) {
     let dataInfo = target.dataset.info;
     let itemId = parseInt(target.dataset.itemId);
     // when click isn't on basket element, basket should be hidden
+
     if (!(target.className).includes("basket")) {
         $(".basket").addClass("hide");
     }
+
     switch (dataInfo) {
         case 'home':
-            showMainAndCategoryPage(goodsData) // to render all items
+            showMainAndCategoryPage(goodsData); // to render all items
             break;
         case 'laptop':
         case 'phone':
@@ -34,7 +36,7 @@ function mainEventHandler(event) {
         case 'show_product':
             showGoodsOnItemPage(goodsData, itemId);
             break;
-        //TO-DO: need also add events for filter and sorting
+        case 'filter_btn':
+            filterGoods(goodsData);
     }
-
 }
