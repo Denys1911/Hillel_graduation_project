@@ -6,6 +6,9 @@ const showMainAndCategoryPage = (goodsData, category) => {
 
     // add special data attr for filter block
     $("main").attr("data-current-category", category);
+    if (!category) {
+        $("main").removeAttr("data-current-category");
+    }
 
     // clear filters when category is choosen
     $(".filters__form").trigger("reset");
