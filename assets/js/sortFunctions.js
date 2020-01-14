@@ -15,16 +15,25 @@ const getSortedGoods = goodsData => {
     };
 
     const sortGoodsByValueAscending = () => {
-         goodsDataCopy.sort((a, b) => a[currentSortType] - b[currentSortType]);
+         return goodsDataCopy.sort((a, b) => a[currentSortType] - b[currentSortType]);
     };
 
     return currentSortDirection === 'descending' ? sortGoodsByValueDescending() : sortGoodsByValueAscending();
 };
 
-const renderSortedGoodsOnPage = goodsData => {
+const prepareGoods = (goodsData, f1, f2) => {
+    const performRequiredFunctions = goodsData => {
+        f1(goodsData);
+        f2(goodsData);
+    };
 
+    compose(
+        getGoodsAccordingToCategory,
+        getSortedGoods,
+        performRequiredFunctions
+    )(goodsData);
 };
 
-const showSortedAndFilteredGoodsOnPage = goodsData => {
+const renderSortedGoodsOnPage = goodsData => prepareGoods(goodsData, showBrandFilter, renderGoods);
 
-};
+const showSortedAndFilteredGoodsOnPage = goodsData => prepareGoods(goodsData, renderGoods, filterGoods);

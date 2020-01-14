@@ -28,5 +28,5 @@ const showMainAndCategoryPage = (goodsData, category) => {
             break;
     }
 
-    renderGoods(goodsData, category);
+    renderSortedGoodsOnPage(goodsData);
 };

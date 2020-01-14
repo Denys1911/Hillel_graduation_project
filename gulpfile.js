@@ -33,6 +33,7 @@ gulp.task('scss', () => {
 
 gulp.task('js', () => {
     return gulp.src([
+        'assets/js/compose.js',
         'assets/js/getGoodsData.js',
         'assets/js/renderGoods.js',
         'assets/js/showMainAndCategoryPage.js',

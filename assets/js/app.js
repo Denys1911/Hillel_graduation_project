@@ -6,6 +6,5 @@
 
     $("body").on("click", {goodsData, goodsInCartData} ,mainEventHandler);
     showMainAndCategoryPage(goodsData);
-    showBrandFilter(goodsData);
     showResolutionsFilter(goodsData);
 })();

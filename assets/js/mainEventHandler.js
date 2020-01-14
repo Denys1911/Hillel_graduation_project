@@ -43,10 +43,12 @@ function mainEventHandler(event) {
         case 'price':
         case 'popularity':
             mainBlock.attr('data-current-sort', dataInfo);
+            showSortedAndFilteredGoodsOnPage(goodsData);
             break;
         case 'descending':
         case 'ascending':
             mainBlock.attr('data-current-sort-direction', dataInfo);
+            showSortedAndFilteredGoodsOnPage(goodsData);
             break;
     }
 }
