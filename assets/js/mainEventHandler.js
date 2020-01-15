@@ -40,6 +40,9 @@ function mainEventHandler(event) {
         case 'filter_btn':
             filterGoods(goodsData);
             break;
+        case 'filter-reset_btn':
+            resetFilters();
+            break;
         case 'price':
         case 'popularity':
             mainBlock.attr('data-current-sort', dataInfo);

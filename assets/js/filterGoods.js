@@ -67,3 +67,9 @@ const filterGoods = goodsData => {
         }
     }
 };
+
+function resetFilters() {
+    $('.catalog__item').each(function () {
+        $(this).removeClass('visually-hidden');
+    })
+}
