@@ -31,4 +31,5 @@ const showMainAndCategoryPage = (goodsData, category) => {
 
     renderGoods(goodsData, category);
     filterGoods(goodsData);
+    showSlider(goodsData, category);
 };
