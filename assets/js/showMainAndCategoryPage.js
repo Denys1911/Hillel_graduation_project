@@ -1,6 +1,7 @@
 const showMainAndCategoryPage = (goodsData, category) => {
     $("section.product, section.comments").addClass("hide");
-    $(".carousel").removeClass("hide");
+    $("li.catalog__item").remove();
+    $(".carousel, section.catalog, aside.filters, .page-title-name").removeClass("hide");
 
     // add special data attr for filter block
     $("main").attr("data-current-category", category);
