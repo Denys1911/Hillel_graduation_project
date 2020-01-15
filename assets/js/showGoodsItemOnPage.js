@@ -45,5 +45,4 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     } else {
         $(".comments__left ul").append($(`<li>Новых комментариев нет.<br />Оставьте свой первым</li>`));
     }
-
-}
+};

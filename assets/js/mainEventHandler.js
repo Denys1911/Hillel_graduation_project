@@ -1,20 +1,23 @@
 function mainEventHandler(event) {
     const {goodsData, goodsInCartData} = event.data;
     const target = event.target;
-    let dataInfo = target.dataset.info;
-    let itemId = parseInt(target.dataset.itemId);
+    const dataInfo = target.dataset.info;
+    const itemId = parseInt(target.dataset.itemId);
+    const mainBlock = $('main');
+
     // when click isn't on basket element, basket should be hidden
     if (!(target.className).includes("basket")) {
         $(".basket").addClass("hide");
     }
+
     switch (dataInfo) {
         case 'home':
-            showMainAndCategoryPage(goodsData) // to render all items
+            showMainAndCategoryPage(goodsData);
             break;
         case 'laptop':
         case 'phone':
         case 'TV':
-            showMainAndCategoryPage(goodsData, dataInfo); // to render certain category items
+            showMainAndCategoryPage(goodsData, dataInfo);
             break;
         case 'add':
         case 'show_cart':
@@ -34,7 +37,21 @@ function mainEventHandler(event) {
         case 'show_product':
             showGoodsOnItemPage(goodsData, itemId);
             break;
-        //TO-DO: need also add events for filter and sorting
+        case 'filter_btn':
+            filterGoods(goodsData);
+            break;
+        case 'filter-reset_btn':
+            resetFilters();
+            break;
+        case 'price':
+        case 'popularity':
+            mainBlock.attr('data-current-sort', dataInfo);
+            showSortedAndFilteredGoodsOnPage(goodsData);
+            break;
+        case 'descending':
+        case 'ascending':
+            mainBlock.attr('data-current-sort-direction', dataInfo);
+            showSortedAndFilteredGoodsOnPage(goodsData);
+            break;
     }
-
 }
