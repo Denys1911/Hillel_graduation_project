@@ -21,10 +21,9 @@ const getSortedGoods = goodsData => {
     return currentSortDirection === 'descending' ? sortGoodsByValueDescending() : sortGoodsByValueAscending();
 };
 
-const prepareGoods = (goodsData, f1, f2) => {
+const prepareGoods = (goodsData, ...functions) => {
     const performRequiredFunctions = goodsData => {
-        f1(goodsData);
-        f2(goodsData);
+        functions.forEach(f => f(goodsData));
     };
 
     compose(
@@ -34,6 +33,6 @@ const prepareGoods = (goodsData, f1, f2) => {
     )(goodsData);
 };
 
-const renderSortedGoodsOnPage = goodsData => prepareGoods(goodsData, showBrandFilter, renderGoods);
+const renderContentOnMainAndCategoryPage = goodsData => prepareGoods(goodsData, showBrandFilter, renderGoods);
 
 const showSortedAndFilteredGoodsOnPage = goodsData => prepareGoods(goodsData, renderGoods, filterGoods);

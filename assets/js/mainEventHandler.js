@@ -4,20 +4,20 @@ function mainEventHandler(event) {
     const dataInfo = target.dataset.info;
     const itemId = parseInt(target.dataset.itemId);
     const mainBlock = $('main');
-    // when click isn't on basket element, basket should be hidden
 
+    // when click isn't on basket element, basket should be hidden
     if (!(target.className).includes("basket")) {
         $(".basket").addClass("hide");
     }
 
     switch (dataInfo) {
         case 'home':
-            showMainAndCategoryPage(goodsData); // to render all items
+            showMainAndCategoryPage(goodsData);
             break;
         case 'laptop':
         case 'phone':
         case 'TV':
-            showMainAndCategoryPage(goodsData, dataInfo); // to render certain category items
+            showMainAndCategoryPage(goodsData, dataInfo);
             break;
         case 'add':
         case 'show_cart':
