@@ -37,6 +37,7 @@ gulp.task('js', () => {
         'assets/js/show-goods.js',
         'assets/js/show-filters.js',
         'assets/js/filter-goods.js',
+        'assets/js/shopping-cart.js',
         'assets/js/app.js',
     ])
         .pipe(concat('main.min.js'))

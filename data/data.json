@@ -329,6 +329,18 @@
         "category": "laptop",
         "cpu": "Intel",
         "comments": ["Топ ноут"]
+    },
+    {
+        "id": 300011,
+        "img": "http://placekitten.com/g/357/573",
+        "price": 880,
+        "available": true,
+        "brand": "MSI",
+        "name": "Ноутбук MSI GE63 9SF Raider RGB",
+        "category": "laptop",
+        "cpu": "Intel",
+        "comments": ["Топ ноут"]
     }
+
 ]
     
