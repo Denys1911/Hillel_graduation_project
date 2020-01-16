@@ -36,6 +36,7 @@ gulp.task('js', () => {
         'assets/js/compose.js',
         'assets/js/getGoodsData.js',
         'assets/js/renderGoods.js',
+        'assets/js/pagination.js',
         'assets/js/showMainAndCategoryPage.js',
         'assets/js/showGoodsItemOnPage.js',
         'assets/js/showCartWithGoods.js',
