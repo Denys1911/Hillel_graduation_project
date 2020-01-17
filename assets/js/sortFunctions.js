@@ -4,10 +4,10 @@ const getGoodsAccordingToCategory = goodsData => {
     return currentCategory ? goodsData.filter(good => good.category === currentCategory) : goodsData;
 };
 
-const getSortedGoods = goodsData => {
+const getSortedGoods = (goodsData, sliderSortType) => {
     const goodsDataCopy = [...goodsData];
     const mainBlock = $('main');
-    const currentSortType = mainBlock.attr('data-current-sort');
+    const currentSortType = sliderSortType ? sliderSortType : mainBlock.attr('data-current-sort');
     const currentSortDirection = mainBlock.attr('data-current-sort-direction');
 
     const sortGoodsByValueDescending = () => {

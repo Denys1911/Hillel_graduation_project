@@ -2,7 +2,7 @@
     [
     {
         "id": 100001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A30.webp",
         "price": 800,
         "available": true,
         "brand": "Samsung",
@@ -17,7 +17,7 @@
     },
     {
         "id": 100002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A40.webp",
         "price": 800,
         "available": true,
         "brand": "Samsung",
@@ -36,7 +36,7 @@
     },
     {
         "id": 100003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-9-black.webp",
         "price": 1500,
         "available": true,
         "brand": "Samsung",
@@ -51,7 +51,7 @@
     },
     {
         "id": 100004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-9-purple.webp",
         "price": 1500,
         "available": true,
         "brand": "Samsung",
@@ -66,7 +66,7 @@
     },
     {
         "id": 100005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-10-red.webp",
         "price": 920,
         "available": false,
         "brand": "Samsung",
@@ -81,7 +81,7 @@
     },
     {
         "id": 100006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-10-black.webp",
         "price": 850,
         "available": true,
         "brand": "Samsung",
@@ -96,7 +96,7 @@
     },
     {
         "id": 100007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/s10-red.webp",
         "price": 210,
         "available": true,
         "brand": "Samsung",
@@ -111,7 +111,7 @@
     },
     {
         "id": 100008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/s10-white.webp",
         "price": 320,
         "available": false,
         "brand": "Samsung",
@@ -126,7 +126,7 @@
     },
     {
         "id": 100009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A50.webp",
         "price": 250,
         "available": true,
         "brand": "Samsung",
@@ -141,7 +141,7 @@
     },
     {
         "id": 100010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/pixel4.webp",
         "price": 1200,
         "available": true,
         "brand": "Google",
@@ -156,7 +156,7 @@
     },
     {
         "id": 200001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/32smgTV.webp",
         "price": 230,
         "available": true,
         "brand": "Samsung",
@@ -171,7 +171,7 @@
     },
     {
         "id": 200002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43lgTV.webp",
         "price": 440,
         "available": true,
         "brand": "Samsung",
@@ -186,7 +186,7 @@
     },
     {
         "id": 200003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43smgTV.webp",
         "price": 480,
         "available": true,
         "brand": "Samsung",
@@ -198,7 +198,7 @@
     },
     {
         "id": 200004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43smgTVHD.webp",
         "price": 4400,
         "available": true,
         "brand": "Samsung",
@@ -213,7 +213,7 @@
     },
     {
         "id": 200005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/55lgTV.webp",
         "price": 8000,
         "available": true,
         "brand": "Samsung",
@@ -225,7 +225,7 @@
     },
     {
         "id": 200006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/65smgTV.webp",
         "price": 1000,
         "available": true,
         "brand": "Samsung",
@@ -240,7 +240,7 @@
     },
     {
         "id": 200007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/65smgTV4k.webp",
         "price": 430,
         "available": true,
         "brand": "LG",
@@ -255,7 +255,7 @@
     },
     {
         "id": 200008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/82smgTV.webp",
         "price": 1730,
         "available": false,
         "brand": "LG",
@@ -267,7 +267,7 @@
     },
     {
         "id": 200009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/77lgTV.webp",
         "price": 14300,
         "available": true,
         "brand": "LG",
@@ -279,7 +279,7 @@
     },
     {
         "id": 200010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/32smgTV.webp",
         "price": 800,
         "available": false,
         "brand": "LG",
@@ -291,7 +291,7 @@
     },
     {
         "id": 300001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/smgntbook7.webp",
         "price": 1000,
         "available": true,
         "brand": "Samsung",
@@ -303,7 +303,7 @@
     },
     {
         "id": 300002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapad330.webp",
         "price": 200,
         "available": true,
         "brand": "Lenovo",
@@ -318,7 +318,7 @@
     },
     {
         "id": 300003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY540.webp",
         "price": 800,
         "available": true,
         "brand": "Lenovo",
@@ -333,7 +333,7 @@
     },
     {
         "id": 300004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadL340.webp",
         "price": 720,
         "available": true,
         "brand": "Lenovo",
@@ -348,7 +348,7 @@
     },
     {
         "id": 300005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY530.webp",
         "price": 1200,
         "available": false,
         "brand": "Lenovo",
@@ -363,7 +363,7 @@
     },
     {
         "id": 300006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS340.webp",
         "price": 1300,
         "available": true,
         "brand": "Lenovo",
@@ -378,7 +378,7 @@
     },
     {
         "id": 300007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS540.webp",
         "price": 910,
         "available": true,
         "brand": "Lenovo",
@@ -393,7 +393,7 @@
     },
     {
         "id": 300008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS340.webp",
         "price": 620,
         "available": false,
         "brand": "Lenovo",
@@ -408,7 +408,7 @@
     },
     {
         "id": 300009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY740.webp",
         "price": 2750,
         "available": true,
         "brand": "Lenovo",
@@ -423,7 +423,7 @@
     },
     {
         "id": 300010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS145.webp",
         "price": 240,
         "available": true,
         "brand": "Lenovo",

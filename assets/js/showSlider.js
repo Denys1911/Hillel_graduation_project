@@ -1,28 +1,10 @@
-function showSlider (goodsData, category) {
-    let tempArray = []; 
-    if (category) {
-        goodsData = goodsData.filter((good) => good.category === category);
-        tempArray = getMaxPrice(goodsData)
-    } else {
-        getMaxPrice(goodsData.filter((good) => good.category === "phone"));
-    }
+function showSlider (goodsData) {
+    const sliderFilter = "popularity";
+    let tempArray = getSortedGoods(getGoodsAccordingToCategory(goodsData), sliderFilter);
+    let slides = $(".d-block");
+    slides = $.makeArray(slides);
 
-    $(".d-block[alt='First slide']").attr("src", tempArray[0]);
-    $(".d-block[alt='Second slide']").attr("src", tempArray[1]);
-    $(".d-block[alt='Third slide']").attr("src", tempArray[2]);
-
-    console.log(getMaxPrice(goodsData));
-}
-
-function getMaxPrice(goodsData) {
-    let maxPrice = 0;
-    let tempArray = [];
-    goodsData.forEach(good => {
-        if (maxPrice < good.price) {
-            maxPrice = good.price;
-            tempArray.unshift(good.img);
-        }
-    });
-    tempArray.splice(3, tempArray.length);
-    return tempArray;
+    slides.forEach( (slide, index) => {
+        slide.alt = tempArray[index].name;
+        slide.src = tempArray[index].img});
 }

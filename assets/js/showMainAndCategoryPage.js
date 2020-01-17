@@ -30,4 +30,5 @@ const showMainAndCategoryPage = (goodsData, category) => {
     }
 
     renderContentOnMainAndCategoryPage(goodsData);
+    showSlider(goodsData);
 };
