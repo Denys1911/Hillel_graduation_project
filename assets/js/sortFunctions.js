@@ -33,6 +33,8 @@ const prepareGoods = (goodsData, ...functions) => {
     )(goodsData);
 };
 
-const renderContentOnMainAndCategoryPage = goodsData => prepareGoods(goodsData, showBrandFilter, renderGoods);
+const renderContentOnMainAndCategoryPage = goodsData => prepareGoods(goodsData, showBrandFilter, renderGoods,
+    renderPaginationBlock, performPagination);
 
-const showSortedAndFilteredGoodsOnPage = goodsData => prepareGoods(goodsData, renderGoods, filterGoods);
+const showSortedAndFilteredGoodsOnPage = goodsData => prepareGoods(goodsData, renderGoods, filterGoods,
+    renderPaginationBlock, performPagination);
