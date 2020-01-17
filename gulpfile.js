@@ -35,12 +35,6 @@ gulp.task('js', () => {
     return gulp.src([
         'assets/js/compose.js',
         'assets/js/getGoodsData.js',
-<<<<<<< HEAD
-        'assets/js/mainEventHandler.js',
-        'assets/js/showMainAndCategoryPage.js',
-        'assets/js/showSlider.js',
-=======
->>>>>>> 783896de9475f78e9c3e9a627e4299e0e0421119
         'assets/js/renderGoods.js',
         'assets/js/pagination.js',
         'assets/js/showMainAndCategoryPage.js',
