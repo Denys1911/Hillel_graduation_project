@@ -15,7 +15,7 @@
             <div class="dream-container dream-container--nav">
                 <nav class="dream-navbar">
                     <a class="dream-navbar__brand" href="#">
-                        <img class="dream-navbar__logo" src="assets/img/dt-logo.png" alt="logo">
+                        <img class="dream-navbar__logo" src="assets/img/dt-logo.png" alt="logo" data-info="home">
                     </a>
 
                     <div class="dream-navbar__wrap-nav">
@@ -88,7 +88,8 @@
             </a>
         </div>
         <div class="page-title-name"></div>
-        <main class="page-main page-main--catalog">
+        <main class="page-main page-main--catalog" data-current-sort="price"
+              data-current-sort-direction="descending">
             <aside class="filters">
                 <h2 class="filters__title-main">Фильтра товаров</h2>
                 <form class="filters__form" method="get">
@@ -179,57 +180,35 @@
                         </ul>
                     </fieldset>
 
-                    <input class="filters__btn btn" type="button" value="Показать">
+                    <input class="filters__btn btn" type="button" value="Показать" data-info="filter_btn">
+                    <input class="filters__btn btn" type="reset" value="Сбросить фильтра"
+                           data-info="filter-reset_btn">
                 </form>
             </aside>
 
             <section class="catalog">
-                <div class="catalog__sort sort">
+                <div class="sort">
                     <p class="sort__text">Сортировать:</p>
-
-                    <ul class="sort__list">
-                        <li class="sort__item">
-                            <a href="#" class="sort__link sort__link--current">По цене</a>
-                        </li>
-                        <li class="sort__item">
-                            <a href="#" class="sort__link">По типу</a>
-                        </li>
-                        <li class="sort__item">
-                            <a href="#" class="sort__link">По названию</a>
-                        </li>
-                    </ul>
-
-                    <ul class="sort__toggle">
-                        <li class="sort__toggle-item">
-                            <a href="#" class="sort__toggle-link sort__toggle-link--down sort__toggle-link--current">
-                                <span class="visually-hidden">Вниз</span>
-                            </a>
-                        </li>
-                        <li class="sort__toggle-item">
-                            <a href="#" class="sort__toggle-link sort__toggle-link--up">
-                                <span class="visually-hidden">Вверх</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="sort__wrapper">
+                        <ul class="sort__list">
+                            <li class="sort__item" data-info="price">
+                                По цене
+                            </li>
+                            <li class="sort__item" data-info="popularity">
+                                По популярности
+                            </li>
+                        </ul>
+                        <ul class="sort__toggle">
+                            <li class="sort__toggle-item sort__toggle-item--down" data-info="descending"></li>
+                            <li class="sort__toggle-item sort__toggle-item--up" data-info="ascending"></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <ul class="catalog__list"></ul>
 
                 <nav class="pagination">
-                    <ul class="pagination__list">
-                        <li class="pagination__item pagination__item">
-                            <a class="pagination__link pagination__link--current">1</a>
-                        </li>
-                        <li class="pagination__item">
-                            <a class="pagination__link" href="#">2</a>
-                        </li>
-                        <li class="pagination__item">
-                            <a class="pagination__link" href="#">3</a>
-                        </li>
-                        <li class="pagination__item pagination__item--next">
-                            <a class="pagination__link pagination__link--next" href="#">Следующая</a>
-                        </li>
-                    </ul>
+                    <ul class="pagination__list"></ul>
                 </nav>
             </section>
 

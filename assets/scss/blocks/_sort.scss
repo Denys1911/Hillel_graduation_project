@@ -1,166 +1,119 @@
 .sort {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
 
-    @media (min-width: $desktop-width) {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-        flex-direction: row;
+    @media (max-width: $desktop-width) {
+        flex-direction: column;
     }
 }
 
 .sort__text {
-    width: 160px;
     margin: 0;
-    margin-right: auto;
-    margin-bottom: 1.1rem;
-
     font-size: 1.8rem;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
 
-    @media (min-width: $desktop-width) {
-        margin-bottom: 0;
+    @media (max-width: $desktop-width) {
+        margin: 2rem 0;
     }
+}
 
+.sort__wrapper {
+    display: flex;
+
+    @media (max-width: $desktop-width) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
 .sort__list {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    margin-left: auto;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
-
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
-
-    }
 }
 
-.sort__item:first-of-type {
-    margin-left: 2.6rem;
-
-    @media (min-width: $desktop-width) {
-        margin-left: 0;
-    }
-}
-
-.sort__item + .sort__item {
-    margin-left: 2.6rem;
-}
-
-.sort__link {
+.sort__item {
     display: block;
-
+    padding: .7rem 1.5rem;
     font-size: 1.4rem;
-    line-height: 1.28571428571;
+    line-height: 1.3;
     font-weight: 500;
     text-transform: uppercase;
-    color: #000000;
     text-decoration: none;
-
-    color: rgba(1, 1, 1, 0.3);
-    &--current {
-        color: rgba(1, 1, 1, 1);
-    }
-    &:hover:not(.sort__link--current) {
-        color: rgba(1, 1, 1, 0.6);
-    }
-    &:active:not(.sort__link--current) {
-        color: rgba(1, 1, 1, 1);
-    }
+    color: rgba(1, 1, 1, .3);
+    transition: color .25s;
 }
 
-.sort__toggle {
-    margin-left: auto;
-}
-
-.sort__toggle-link:not(.sort__toggle-link--current):hover,
-.sort__toggle-link:not(.sort__toggle-link--current):focus {
-    opacity: 0.6;
-}
-
-.sort__toggle-link:not(.sort__toggle-link--current):active {
-    opacity: 1;
-}
-
-.sort__link--current {
-    opacity: 1;
-    cursor: default;
+.sort__item:hover {
+    cursor: pointer;
+    color: rgba(1, 1, 1, .6);
 }
 
 .sort__toggle {
     display: flex;
-
     width: 60px;
-    margin: 0;
     margin-left: 2rem;
     padding: 0;
-
     list-style: none;
 }
 
 .sort__toggle-item {
     width: 30px;
-}
-
-.sort__toggle-link {
     position: relative;
-
     display: block;
-
-    opacity: 0.3;
+    opacity: .3;
+    transition: opacity .25s;
 }
 
-.sort__toggle-link:not(.sort__toggle-link--current):hover,
-.sort__toggle-link:not(.sort__toggle-link--current):focus {
-    opacity: 0.6;
+.sort__toggle-item:hover {
+    cursor: pointer;
+    opacity: .6;
 }
 
-.sort__toggle-link:not(.sort__toggle-link--current):active {
-    opacity: 1;
-}
-
-.sort__toggle-link--current {
-    cursor: default;
-
-    opacity: 1;
-}
-
-.sort__toggle-link--down::before {
+.sort__toggle-item--down::before,
+.sort__toggle-item--up::before {
     content: "";
-
     position: absolute;
-    top: -3px;
-
     width: 30px;
     height: 30px;
+    background-repeat: no-repeat;
+    background-position: 9px;
+}
 
+.sort__toggle-item--down::before {
     background-image: url("../../assets/img/svg/icon-down-dir.svg");
-    background-repeat: no-repeat;
-    background-position: 11px 7px;
 }
 
-.sort__toggle-link--up::before {
-    content: "";
-
-    position: absolute;
-    top: -3px;
-
-    width: 30px;
-    height: 30px;
-
+.sort__toggle-item--up::before {
     background-image: url("../../assets/img/svg/icon-up-dir.svg");
-    background-repeat: no-repeat;
-    background-position: 11px 7px;
+}
 
-    opacity: 0.3;
+main[data-current-sort="price"] {
+    .sort__item[data-info="price"] {
+        color: rgb(0, 0, 0);
+    }
+}
+
+main[data-current-sort="popularity"] {
+    .sort__item[data-info="popularity"] {
+        color: rgb(0, 0, 0);
+    }
+}
+
+main[data-current-sort-direction="descending"] {
+    .sort__toggle-item[data-info="descending"] {
+        opacity: 1;
+    }
+}
+
+main[data-current-sort-direction="ascending"] {
+    .sort__toggle-item[data-info="ascending"] {
+        opacity: 1;
+    }
 }
