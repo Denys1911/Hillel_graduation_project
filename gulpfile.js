@@ -45,6 +45,7 @@ gulp.task('js', () => {
         'assets/js/filterGoods.js',
         'assets/js/sortFunctions.js',
         'assets/js/cart.js',
+        'assets/js/showSlider.js',
         'assets/js/mainEventHandler.js',
         'assets/js/app.js',
     ])
