@@ -300,6 +300,71 @@
                         </li>
                     </ul>
                 </nav>  
+                    <!-- <ul class="pagination__list"></ul> -->
+                <!-- </nav> -->
+            </section>
+
+            <section class="product hide">
+                <div class="product__description">
+                    <div class="product__header">
+                        <h5 class="product__title"></h5>
+
+                        <img class="product__img" src="assets/img/products/legionY540.webp" alt="product item">
+                    </div>
+
+                    <div class="product__body">
+                        <div class="product__table">
+                            <h5 class="product__specifications">Характеристии:</h5>
+                        </div>
+
+                        <div class="product__buy">
+                            <p class="product__price">
+                                Цена: <span class="product__price-text"></span>
+                            </p>
+
+                            <div class="product__btns">
+                                <div class="product__spinner">
+                                    <div class="product__minus"></div>
+                                    <input class="product__count" type="text" value="1">
+                                    <div class="product__plus"></div>
+                                </div>
+                                <button class="product__btn btn">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="comments hide">
+                <h5 class="comments__title">Отзывы:</h5>
+
+                <div class="comments__left">
+                    <ul></ul>
+                </div>
+                <form class="comments__form" method="post">
+                    <div class="comments__form-inner">
+                        <ul class="comments__form-list">
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="name">Имя:</label>
+                                <input class="comments__input comments__input--name" id="name" type="text"
+                                    placeholder="Введтие ваше имя*">
+                            </li>
+                            <li class="comments__form-item">
+                                <label class="comments__label" for="surname">E-mail:</label>
+                                <input class="comments__input comments__input--email" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="comments__form-inner">
+                        <h5 class="comments__form-title">Оставьте свой отзыв:</h5>
+
+                        <textarea class="comments__textarea" name="comment"  placeholder="Ваш отзыв" readonly=""></textarea>
+                    </div>
+
+                    <button class="comments__btn btn" type="submit">Добавить</button>
+                </form>
             </section>
         </main>
 

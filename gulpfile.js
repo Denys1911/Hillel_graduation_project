@@ -33,11 +33,18 @@ gulp.task('scss', () => {
 
 gulp.task('js', () => {
     return gulp.src([
-        'assets/js/get-goods-data.js',
-        'assets/js/show-goods.js',
-        'assets/js/show-filters.js',
-        'assets/js/filter-goods.js',
+        'assets/js/compose.js',
+        'assets/js/getGoodsData.js',
+        'assets/js/renderGoods.js',
+        'assets/js/pagination.js',
+        'assets/js/showMainAndCategoryPage.js',
+        'assets/js/showGoodsItemOnPage.js',
+        'assets/js/showCartWithGoods.js',
+        'assets/js/showFilters.js',
         'assets/js/shopping-cart.js',
+        'assets/js/filterGoods.js',
+        'assets/js/sortFunctions.js',
+        'assets/js/mainEventHandler.js',
         'assets/js/app.js',
     ])
         .pipe(concat('main.min.js'))
