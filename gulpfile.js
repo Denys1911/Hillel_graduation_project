@@ -35,6 +35,7 @@ gulp.task('js', () => {
     return gulp.src([
         'assets/js/compose.js',
         'assets/js/getGoodsData.js',
+        'assets/js/handleGoodsInCartData.js',
         'assets/js/renderGoods.js',
         'assets/js/pagination.js',
         'assets/js/showMainAndCategoryPage.js',
@@ -43,6 +44,7 @@ gulp.task('js', () => {
         'assets/js/showFilters.js',
         'assets/js/filterGoods.js',
         'assets/js/sortFunctions.js',
+        'assets/js/cart.js',
         'assets/js/mainEventHandler.js',
         'assets/js/app.js',
     ])

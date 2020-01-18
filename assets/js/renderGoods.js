@@ -9,7 +9,7 @@ const renderGoods = goodsData => {
         const unavailableMessage = '<span class="catalog__text--unavailable">(Нет в наличии)</span>';
 
         catalogList.append(`
-            <li class="catalog__item" data-item-id=${id} data-available=${available}>
+            <li class="catalog__item" data-available=${available}>
                 <div class="catalog__item-browser"></div>
                 <a href="#" data-item-id=${id}>
                     <img class="catalog__img" data-info="show_product" src=${img} alt="${name}" data-item-id=${id}>

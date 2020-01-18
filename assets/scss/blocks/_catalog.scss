@@ -142,8 +142,8 @@
 
 }
 
-.catalog__item:hover .catalog__item-hide,
-.catalog__item:focus .catalog__item-hide {
+.catalog__item .catalog__item-hide,
+.catalog__item .catalog__item-hide {
     display: block;
 }
 

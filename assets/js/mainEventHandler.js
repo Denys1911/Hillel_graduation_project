@@ -20,18 +20,18 @@ function mainEventHandler(event) {
             showMainAndCategoryPage(goodsData, dataInfo);
             break;
         case 'add':
+            addGoodTocart(itemId, goodsData, goodsInCartData);
         case 'show_cart':
-            //add to cart function;
-            showCartWithGoods(itemId, goodsInCartData);
+            showCartWithGoods(goodsInCartData);
             //они будут работать вместе, т.к. мы показываем корзину каждый раз когда добавляем товар в нее
             break;
         case 'remove':
-            //remove from cart function;
+            removeGoodFromCart(itemId, goodsData);
             break;
-        case 'increase':
+        case 'plus':
             //increase q-ty of item in cart function;
             break;
-        case 'decrease':
+        case 'minus':
             //decrease q-ty of item in cart function;
             break;
         case 'show_product':
