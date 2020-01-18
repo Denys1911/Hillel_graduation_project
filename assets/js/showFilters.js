@@ -2,6 +2,8 @@ const showFilter = (goodsData, filterName, filterSelector) => {
     const filtersList = $(filterSelector);
     const filterItems = new Set();
 
+    filtersList.html('');
+
     goodsData.forEach(good => {
         const value = good[filterName];
 
@@ -12,15 +14,15 @@ const showFilter = (goodsData, filterName, filterSelector) => {
 
     filterItems.forEach(item => {
         filtersList.append(`
-        <li class="filters__item-option">
-            <input type="checkbox"
-                   name=${filterName}
-                   id="filter-${item}"
-                   value=${item}
-                   class="visually-hidden filters__input filter__input--checkbox">
-            <label for="filter-${item}">${item}</label>
-        </li>
-    `);
+            <li class="filters__item-option">
+                <input type="checkbox"
+                       name=${filterName}
+                       id="filter-${item}"
+                       value=${item}
+                       class="visually-hidden filters__input filter__input--checkbox">
+                <label for="filter-${item}">${item}</label>
+            </li>
+        `);
     });
 };
 
