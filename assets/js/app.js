@@ -1,10 +1,8 @@
 (async function() {
     const GOODS_STORAGE_NAME = 'all_goods';
-    const CART_STORAGE_NAME = 'goods_in_cart';
     let goodsData = await getGoodsData(GOODS_STORAGE_NAME);
-    let goodsInCartData = getGoodsInCartData(CART_STORAGE_NAME);
 
-    $('body').on('click', {goodsData, goodsInCartData}, mainEventHandler);
+    $('body').on('click', {goodsData}, mainEventHandler);
     showMainAndCategoryPage(goodsData);
     showResolutionsFilter(goodsData);
 })();

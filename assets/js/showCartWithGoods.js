@@ -5,19 +5,19 @@ function showCartWithGoods (goodsInCartData) {
     if (goodsInCartData.length) {
         goodsInCartData.forEach(good => {
             let newGood = $(`
-                <tr data-item-id=${good.item.id}>
-                    <td class="basket__delete" data-item-id=${good.item.id}>
+                <tr>
+                    <td class="basket__delete">
                         <button data-item-id=${good.item.id} data-info="remove">Удалить</button>
                     </td>
-                    <td class="basket__pic" data-item-id=${good.item.id}>
+                    <td class="basket__pic">
                         <img src=${good.item.img} width="33" height="33" alt=${good.item.name} data-item-id=${good.item.id} data-info="show_product">
                     </td>
                     <td class="basket__name">${good.item.name}</td>
                     <td class="basket__price">
                         <div class="basket__spinner">
-                            <div class="basket__minus" data-info="add">-</div>
+                            <div class="basket__minus" data-info="minus" data-item-id=${good.item.id}>-</div>
                             <div class="basket__count">${good.qty}</div>
-                            <div class="basket__plus" data-info="remove">+</div>
+                            <div class="basket__plus" data-info="plus" data-item-id=${good.item.id}>+</div>
                         </div>
                         <span class="basket__single_item_price">${good.item.price} грн.</span>
                     </td>

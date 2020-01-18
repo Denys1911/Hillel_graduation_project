@@ -15,5 +15,6 @@ const setGoodsInCartData = (goods) => {
     const goodsStorageName = 'goods_in_cart';
     if (goods) {
         localStorage.setItem(goodsStorageName, JSON.stringify(goods));
-    };
+        showCartWithGoods(goods);
+    };   
 }

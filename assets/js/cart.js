@@ -1,24 +1,51 @@
-function addGoodTocart (itemId, goodsData, goodsInCartData, quantity = 1) {
-    let newItem = goodsData.find(good => good.id === itemId);
-    let matchFlag = 0;
-    if (goodsInCartData.length) {
-        for (let i = 0; i < goodsInCartData.length; i++) {
-            if (goodsInCartData[i].item.id === itemId) {
-                goodsInCartData[i].qty += quantity;
-                goodsInCartData[i].sumItem = goodsInCartData[i].qty * goodsInCartData[i].item.price;
-                matchFlag++;
+function cartHandler (flag, itemId, goodsInCartData, goodsData, quantity = 1) {
+    switch (flag) {
+        case 'add':
+        case 'addFromPDP':
+            let newItem = goodsData.find(good => good.id === itemId);
+        case 'plus':
+            if (goodsInCartData.length) {
+                for (let i = 0; i < goodsInCartData.length; i++) {
+                    if (goodsInCartData[i].item.id === itemId) {
+                        goodsInCartData[i].qty += quantity;
+                        calculateItemSumPrice(goodsInCartData[i]);
+                        setGoodsInCartData(goodsInCartData);
+                        return;
+                    } else if (i === goodsInCartData.length - 1) {
+                        pushNewItem(newItem, goodsInCartData, quantity);
+                        setGoodsInCartData(goodsInCartData);
+                        return;
+                    }
+                }
             }
-        }
+            pushNewItem(newItem, goodsInCartData, quantity);
+            setGoodsInCartData(goodsInCartData);
+            return;
+        case 'minus':
+            for (let i = 0; i < goodsInCartData.length; i++) {
+                if (goodsInCartData[i].item.id === itemId) {
+                    goodsInCartData[i].qty -= quantity;
+                    if (!goodsInCartData[i].qty) {
+                        goodsInCartData.splice(i, 1);
+                    } else {
+                        calculateItemSumPrice(goodsInCartData[i]);
+                    }
+                    setGoodsInCartData(goodsInCartData);
+                    return;
+                }
+            }
+        case 'remove':
+            for (let i = 0; i < goodsInCartData.length; i++) {
+                if (goodsInCartData[i].item.id === itemId) {
+                    goodsInCartData.splice(i, 1);
+                    setGoodsInCartData(goodsInCartData);
+                    return;
+                }
+            }
     }
-    if (!matchFlag) {
-        pushNewItem(newItem, goodsInCartData, quantity);
-    }
-    setGoodsInCartData(goodsInCartData);
-    event.stopPropagation();
 }
 
 function pushNewItem (newItem, goodsInCartData, quantity) {
-    console.log(newItem)
     goodsInCartData.push({
         item: newItem,
         qty: quantity,
@@ -26,6 +53,6 @@ function pushNewItem (newItem, goodsInCartData, quantity) {
     })
 }
 
-function removeGoodFromCart (itemId, quantity) {
-
+function calculateItemSumPrice (productInCart) {
+    productInCart.sumItem = productInCart.qty * productInCart.item.price;
 }

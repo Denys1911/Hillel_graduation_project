@@ -1,9 +1,13 @@
 function mainEventHandler(event) {
-    const {goodsData, goodsInCartData} = event.data;
+    const {goodsData} = event.data;
     const target = event.target;
     const dataInfo = target.dataset.info;
     const itemId = parseInt(target.dataset.itemId);
     const mainBlock = $('main');
+    let productQty = $(".product__count");
+    let itemCountValue = parseInt(productQty.text());
+    const CART_STORAGE_NAME = 'goods_in_cart';
+    let goodsInCartData = getGoodsInCartData(CART_STORAGE_NAME);
 
     // when click isn't on basket element, basket should be hidden
     if (!(target.className).includes("basket")) {
@@ -20,19 +24,30 @@ function mainEventHandler(event) {
             showMainAndCategoryPage(goodsData, dataInfo);
             break;
         case 'add':
-            addGoodTocart(itemId, goodsData, goodsInCartData);
+            cartHandler(dataInfo, itemId, goodsInCartData, goodsData);
+            break;
         case 'show_cart':
             showCartWithGoods(goodsInCartData);
-            //они будут работать вместе, т.к. мы показываем корзину каждый раз когда добавляем товар в нее
-            break;
-        case 'remove':
-            removeGoodFromCart(itemId, goodsData);
             break;
         case 'plus':
-            //increase q-ty of item in cart function;
+            cartHandler(dataInfo, itemId, goodsInCartData);
             break;
         case 'minus':
-            //decrease q-ty of item in cart function;
+            cartHandler(dataInfo, itemId, goodsInCartData);
+            break;
+        case 'remove':
+            cartHandler(dataInfo, itemId, goodsInCartData);
+            break;
+        case 'increase':
+            productQty.text(++itemCountValue);
+            break;
+        case 'decrease':
+            if (itemCountValue > 1) {
+                productQty.text(--itemCountValue);
+            }  
+            break;
+        case 'addFromPDP':
+            cartHandler(dataInfo, itemId, goodsInCartData, goodsData, itemCountValue);
             break;
         case 'show_product':
             showGoodsOnItemPage(goodsData, itemId);
