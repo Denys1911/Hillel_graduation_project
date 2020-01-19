@@ -8,12 +8,36 @@
     z-index: 100;
 
     @media (min-width: $desktop-width) {
-        position: absolute;
-        width: 540px;
-
-        right: 53px;
-        top: 133px;
+        position: fixed;
+        width: 50%;
+        right: 25%;
+        top: 30%;
     }
+}
+
+.confirmSuccess {
+    padding: 20px 14px 22px;
+
+    background-color: #f8f7f4;
+    border-radius: 6px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+    z-index: 100;
+
+    @media (min-width: $desktop-width) {
+        position: fixed;
+        width: 50%;
+        right: 25%;
+        top: 30%;
+    }
+}
+
+.basket__background {
+    height: 3500px;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    z-index: 10;
 }
 
 .basket__table {
@@ -92,7 +116,7 @@
     border-top: 1px solid #cacac7;
 }
 
-.basket__btn{
+.basket__btn, .basket__submit{
     display: table;
     margin-left: auto;
     padding: 8px 15px 12px;
@@ -130,4 +154,9 @@
     border-style: none;
     text-align: center;
     vertical-align: middle;
+}
+
+.order__error {
+    color: red;
+    height: auto;
 }

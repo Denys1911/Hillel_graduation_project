@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="basket__background hide"></div>
     <div class="main-container">
         <header class="page-header">
             <div class="dream-container dream-container--nav">
@@ -46,6 +47,14 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="confirmSuccess hide">
+                        <p>Ваш заказ принят в работу!</p>
+                        <p>Ожидайте пока наши менеджеры с Вами свяжутся</p>
+                        <p>Детали заказа:</p>
+                        <ul>
+                        </ul>
+                        <p class="confirmSuccess_total"></p>
+                    </div>
                     <div class="basket hide">
                         <table class="basket__table">
                             <tbody>
@@ -56,7 +65,27 @@
                                 </tr>
                             </tfoot>
                         </table>
-                        <a class="basket__btn btn" href="#">Оформить заказ</a>
+                        <div class="basket__total hide"></div>
+                        <div class="basket__empty">КОРЗИНА ПУСТА</div>
+                        <a class="basket__btn btn hide" href="#" data-info="prepOrder">Оформить заказ</a>
+                        <div class="order__form hide">
+                            <div class="order__error hide"></div>
+                            <ul class="order__form-list">
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_name">Имя:</label>
+                                    <input class="order__input" name="order_name" type="text" placeholder="Введите ваше имя*">
+                                </li>
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_email">E-mail:</label>
+                                    <input class="order__input" type="text" name="order_email" value="" placeholder="Ваш e-mail*">
+                                </li>
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_tel">Телефон:</label>
+                                    <input class="order__input" type="tel" name="order_tel" value="" placeholder="Ваш телефон*">
+                                </li>
+                            </ul>
+                            <a class="basket__submit btn" data-info="confirmOrder" href="#">Подтвердить заказ</a>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -255,7 +284,7 @@
                             <li class="comments__form-item">
                                 <label class="comments__label" for="name">Имя:</label>
                                 <input class="comments__input comments__input--name" id="name" type="text"
-                                    placeholder="Введтие ваше имя*">
+                                    placeholder="Введите ваше имя*">
                             </li>
                             <li class="comments__form-item">
                                 <label class="comments__label" for="surname">E-mail:</label>

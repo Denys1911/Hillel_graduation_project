@@ -1,8 +1,11 @@
 function showCartWithGoods (goodsInCartData) {
-    $(".basket").removeClass("hide");
+    $(".basket, .basket__background").removeClass("hide");
     $(".basket__table tr").remove();
 
     if (goodsInCartData.length) {
+        let goodsTotal = 0;
+        $(".basket__empty, .order__form").addClass("hide");
+        $(".basket__total, .basket__btn").removeClass("hide");
         goodsInCartData.forEach(good => {
             let newGood = $(`
                 <tr>
@@ -25,6 +28,11 @@ function showCartWithGoods (goodsInCartData) {
                 </tr>
                 `)
                 $(".basket__table tbody").append(newGood);
-        })
+                goodsTotal += good.sumItem;
+        });
+        $(".basket__total").text(`ИТОГО: ${goodsTotal} грн.`)
+    } else {
+        $(".basket__total, .basket__btn, .order__form, .infoContainer").addClass("hide");
+        $(".basket__empty").removeClass("hide");
     }
 }

@@ -1,4 +1,4 @@
-function mainEventHandler(event) {
+async function mainEventHandler(event) {
     const {goodsData} = event.data;
     const target = event.target;
     const dataInfo = target.dataset.info;
@@ -7,11 +7,11 @@ function mainEventHandler(event) {
     let productQty = $(".product__count");
     let itemCountValue = parseInt(productQty.text());
     const CART_STORAGE_NAME = 'goods_in_cart';
-    let goodsInCartData = getGoodsInCartData(CART_STORAGE_NAME);
+    let goodsInCartData = await getGoodsInCartData(CART_STORAGE_NAME);
 
     // when click isn't on basket element, basket should be hidden
-    if (!(target.className).includes("basket")) {
-        $(".basket").addClass("hide");
+    if ((target.className).includes("basket__background")) {
+        $(".basket, .basket__background, .confirmSuccess").addClass("hide");
     }
 
     switch (dataInfo) {
@@ -87,6 +87,13 @@ function mainEventHandler(event) {
             performPageSwitching('next');
             validatePageNavButtons();
             performPagination();
+            break;
+        case 'prepOrder':
+            $(".basket__btn").addClass("hide");
+            $(".order__form, .basket__submit").removeClass("hide");
+            break;
+        case 'confirmOrder':
+            submitOrder(goodsInCartData);
             break;
     }
 

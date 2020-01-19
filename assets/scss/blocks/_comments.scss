@@ -30,20 +30,20 @@
     background-color: #eee;
 }
 
-.comments__form {}
+.comments__form, .order__form {}
 
-.comments__form-list {
+.comments__form-list, .order__form-list {
     padding: 0;
 
     list-style: none;
 }
 
-.comments__form-item {
+.comments__form-item, .order__form-item {
     display: flex;
     flex-direction: column;
 }
 
-.comments__input {
+.comments__input, .order__input {
     box-sizing: border-box;
     border: 2px solid #a6a6a6;
     border-radius: 4px;
