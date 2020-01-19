@@ -28,7 +28,7 @@ async function submitOrder (goodsInCartData) {
         infoContainer.append(`<li>Информация о заказе №${order.id}: <br />Покупатель: </li>`);
 
         order.userInfo.forEach((info) => {
-            infoContainer.append(`<li>${info}<li/>`);
+            infoContainer.append(`<li>${info}</li>`);
         })
 
         order.userCart.forEach((good) => {
