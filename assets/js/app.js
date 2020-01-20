@@ -4,9 +4,8 @@
     let goodsData = await getGoodsData(GOODS_STORAGE_NAME);
     let goodsInCartData = await getGoodsData(CART_STORAGE_NAME);
 
-    $("body").on("click", {goodsData, goodsInCartData} ,mainEventHandler);
+    $('body').on('click', {goodsData, goodsInCartData} ,mainEventHandler);
     showMainAndCategoryPage(goodsData);
-    showBrandFilter(goodsData);
     showResolutionsFilter(goodsData);
 
     addNewComments();

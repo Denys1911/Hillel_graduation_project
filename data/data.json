@@ -2,13 +2,14 @@
     [
     {
         "id": 100001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A30.webp",
         "price": 800,
         "available": true,
         "brand": "Samsung",
         "name": "Galaxy Note 9 Black (SM-N960FZKDSEK)",
         "category": "phone",
         "sim": "1",
+        "popularity": 7,
         "comments": [{
             "user": "Bingo Bongo",
             "text": "Do not buy it"
@@ -16,13 +17,14 @@
     },
     {
         "id": 100002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A40.webp",
         "price": 800,
         "available": true,
         "brand": "Samsung",
         "name": "Galaxy Note 9 Purple (SM-N960FZPDSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 9,
         "comments": [{
             "user": "Pervert",
             "text": "Real shit"
@@ -34,13 +36,14 @@
     },
     {
         "id": 100003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-9-black.webp",
         "price": 1500,
         "available": true,
         "brand": "Samsung",
         "name": "Galaxy Note 10 Aura Red (SM-N970FZRDSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 8,
         "comments": [{
             "user": "Darth Vader",
             "text": "ПЕРВЫЙ!!"
@@ -48,13 +51,14 @@
     },
     {
         "id": 100004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-9-purple.webp",
         "price": 1500,
         "available": true,
         "brand": "Samsung",
         "name": "Galaxy 10 Aura Black (SM-N975FZKDSEK)",
         "category": "phone",
         "sim": "1",
+        "popularity": 5,
         "comments": [{
             "user": "Santa",
             "text": "Real!"
@@ -62,13 +66,14 @@
     },
     {
         "id": 100005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-10-red.webp",
         "price": 920,
         "available": false,
         "brand": "Samsung",
         "name": "Galaxy S10 Red (SM-G973FZRDSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 10,
         "comments": [{
             "user": "Harasho",
             "text": "shit!"
@@ -76,13 +81,14 @@
     },
     {
         "id": 100006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/note-10-black.webp",
         "price": 850,
         "available": true,
         "brand": "Samsung",
         "name": "Galaxy S10 White (SM-G973FZWDSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 4,
         "comments": [{
             "user": "Korean customer",
             "text": "неплох!!"
@@ -90,13 +96,14 @@
     },
     {
         "id": 100007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/s10-red.webp",
         "price": 210,
         "available": true,
         "brand": "Samsung",
         "name": "A30 (SM-A305FZRUSEK)",
         "category": "phone",
         "sim": "1",
+        "popularity": 9,
         "comments": [{
             "user": "Gogol",
             "text": "нормальный апарат"
@@ -104,13 +111,14 @@
     },
     {
         "id": 100008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/s10-white.webp",
         "price": 320,
         "available": false,
         "brand": "Samsung",
         "name": "A50 (SM-A505FZKQSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 7,
         "comments": [{
             "user": "Volt",
             "text": "камера хорошая"
@@ -118,13 +126,14 @@
     },
     {
         "id": 100009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/A50.webp",
         "price": 250,
         "available": true,
         "brand": "Samsung",
         "name": "A40 (SM-A405FZKDSEK)",
         "category": "phone",
         "sim": "2",
+        "popularity": 6,
         "comments": [{
             "user": "Tito",
             "text": "тянет игры!"
@@ -132,13 +141,14 @@
     },
     {
         "id": 100010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/pixel4.webp",
         "price": 1200,
         "available": true,
         "brand": "Google",
         "name": "Pixel 4 (Oh So Orange)",
         "category": "phone",
         "sim": "1",
+        "popularity": 5,
         "comments": [{
             "user": "Molly",
             "text": "Единственный нормальный телефон!"
@@ -146,13 +156,14 @@
     },
     {
         "id": 200001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/32smgTV.webp",
         "price": 230,
         "available": true,
         "brand": "Samsung",
         "name": "Full HD Smart TV (UE32N5300AUXUA)",
         "category": "TV",
         "resolution": "32",
+        "popularity": 8,
         "comments": [{
             "user": "asdasdasd",
             "text": "маленький экран"
@@ -160,13 +171,14 @@
     },
     {
         "id": 200002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43lgTV.webp",
         "price": 440,
         "available": true,
         "brand": "Samsung",
         "name": "4K Smart TV (UE43NU7090UXUA)",
         "category": "TV",
         "resolution": "43",
+        "popularity": 7,
         "comments": [{
             "user": "bgsdaw",
             "text": "хороший телевизор"
@@ -174,24 +186,26 @@
     },
     {
         "id": 200003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43smgTV.webp",
         "price": 480,
         "available": true,
         "brand": "Samsung",
         "name": "Full HD Smart TV (UE32N5300AUXUA)",
         "category": "TV",
         "resolution": "43",
+        "popularity": 9,
         "comments": []
     },
     {
         "id": 200004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/43smgTVHD.webp",
         "price": 4400,
         "available": true,
         "brand": "Samsung",
         "name": "4K Smart TV (UE82RU8000UXUA)",
         "category": "TV",
         "resolution": "82",
+        "popularity": 7,
         "comments": [{
             "user": "Nerd",
             "text": "АГОНЬ"
@@ -199,24 +213,26 @@
     },
     {
         "id": 200005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/55lgTV.webp",
         "price": 8000,
         "available": true,
         "brand": "Samsung",
         "name": "8K Smart TV (QE65Q900RBUXUA)",
         "category": "TV",
         "resolution": "65",
+        "popularity": 10,
         "comments": []
     },
     {
         "id": 200006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/65smgTV.webp",
         "price": 1000,
         "available": true,
         "brand": "Samsung",
         "name": "4K Smart TV (UE55RU7470UXUA)",
         "category": "TV",
         "resolution": "65",
+        "popularity": 4,
         "comments": [{
             "user": "vasya",
             "text":"Купил маме такой же"
@@ -224,13 +240,14 @@
     },
     {
         "id": 200007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/65smgTV4k.webp",
         "price": 430,
         "available": true,
         "brand": "LG",
         "name": "4K Smart TV (43UK6300PLB)",
         "category": "TV",
         "resolution": "43",
+        "popularity": 6,
         "comments": [{
             "user": "Alex",
             "text": "Not bad"
@@ -238,57 +255,62 @@
     },
     {
         "id": 200008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/82smgTV.webp",
         "price": 1730,
         "available": false,
         "brand": "LG",
         "name": "4K Smart TV (55SM9010PLA)",
         "category": "TV",
         "resolution": "55",
+        "popularity": 9,
         "comments": []
     },
     {
         "id": 200009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/77lgTV.webp",
         "price": 14300,
         "available": true,
         "brand": "LG",
         "name": "4K Smart TV (OLED77C8PLA)",
         "category": "TV",
         "resolution": "77",
+        "popularity": 7,
         "comments": []
     },
     {
         "id": 200010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/32smgTV.webp",
         "price": 800,
         "available": false,
         "brand": "LG",
         "name": "4K Smart TV (43UK6390PLG)",
         "category": "TV",
         "resolution": "43",
+        "popularity": 5,
         "comments": []
     },
     {
         "id": 300001,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/smgntbook7.webp",
         "price": 1000,
         "available": true,
         "brand": "Samsung",
         "name": "Notebook 7 (NP730XBE)",
         "category": "laptop",
         "cpu": "Intel",
+        "popularity": 9,
         "comments": []
     },
     {
         "id": 300002,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapad330.webp",
         "price": 200,
         "available": true,
         "brand": "Lenovo",
         "name": "Ideapad 330 15 (81D2006MRU)",
         "category": "laptop",
         "cpu": "Intel",
+        "popularity": 6,
         "comments": [{
             "user": "Connor McGregor",
             "text": "сознательно снизили производительность"
@@ -296,13 +318,14 @@
     },
     {
         "id": 300003,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY540.webp",
         "price": 800,
         "available": true,
         "brand": "Lenovo",
         "name": "Legion Y540 15 (81SY007CPB)",
         "category": "laptop",
         "cpu": "Intel",
+        "popularity": 3,
         "comments": [{
             "user": "Жорик",
             "text": "Не совсем удачная модель на мой взгляд"
@@ -310,13 +333,14 @@
     },
     {
         "id": 300004,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadL340.webp",
         "price": 720,
         "available": true,
         "brand": "Lenovo",
         "name": "IdeaPad L340 15 Gaming (81LK009XRK )",
         "category": "laptop",
         "cpu": "AMD",
+        "popularity": 7,
         "comments": [{
             "user": "Олесь",
             "text": "Если вы понимаете ЗАЧЕМ вам такой ноутбук, то вы будете счастливы."
@@ -324,13 +348,14 @@
     },
     {
         "id": 300005,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY530.webp",
         "price": 1200,
         "available": false,
         "brand": "Lenovo",
         "name": "Legion Y530 (81FV015QRA)",
         "category": "laptop",
         "cpu": "AMD",
+        "popularity": 8,
         "comments": [{
             "user": "Javanshir",
             "text": "отличная модель, очень понравилось"
@@ -338,13 +363,14 @@
     },
     {
         "id": 300006,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS340.webp",
         "price": 1300,
         "available": true,
         "brand": "Lenovo",
         "name": " IdeaPad S340 15 (81NE00C5RA)",
         "category": "laptop",
         "cpu": "AMD",
+        "popularity": 6,
         "comments": [{
             "user": "Zhao Zing",
             "text": "НЕ БРАТЬ!!!!!!"
@@ -352,13 +378,14 @@
     },
     {
         "id": 300007,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS540.webp",
         "price": 910,
         "available": true,
         "brand": "Lenovo",
         "name": " IdeaPad S540 14 (81NH0050RA)",
         "category": "laptop",
         "cpu": "AMD",
+        "popularity": 7,
         "comments": [{
             "user": "R2d2",
             "text": "хорошая модель, понравилось"
@@ -366,13 +393,14 @@
     },
     {
         "id": 300008,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS340.webp",
         "price": 620,
         "available": false,
         "brand": "Lenovo",
         "name": "Ideapad C340 14 (81N6005TRA)",
         "category": "laptop",
         "cpu": "Intel",
+        "popularity": 7,
         "comments": [{
             "user": "Mr Bin",
             "text": "Идеальная модель, кроме wifi"
@@ -380,13 +408,14 @@
     },
     {
         "id": 300009,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/legionY740.webp",
         "price": 2750,
         "available": true,
         "brand": "Lenovo",
         "name": "Legion Y740 17 (81UJ0054RA)",
         "category": "laptop",
         "cpu": "AMD",
+        "popularity": 5,
         "comments": [{
             "user": "anon436",
             "text": "тянет все игры!"
@@ -394,13 +423,14 @@
     },
     {
         "id": 300010,
-        "img": "http://placekitten.com/g/357/573",
+        "img": "assets/img/products/ideapadS145.webp",
         "price": 240,
         "available": true,
         "brand": "Lenovo",
         "name": "IdeaPad S145 15 (81MV00L5RA)",
         "category": "laptop",
         "cpu": "Intel",
+        "popularity": 10,
         "comments": [{
             "user": "asdasdasd",
             "text": "Топ ноут"
