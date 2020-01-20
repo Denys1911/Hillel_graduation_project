@@ -11,3 +11,7 @@ const getGoodsData = async goodsStorageName => {
 
     return localStorageValue;
 };
+
+const setGoodsData = (goodsStorageName, goodsData) => {
+    localStorage.setItem(goodsStorageName, JSON.stringify(goodsData));
+}
