@@ -1,7 +1,8 @@
 .product {
     display: flex;
     flex-direction: column;
-
+    vertical-align: top;
+    min-width: 70%;
     padding: 0 1rem;
 
     @media (min-width: $desktop-width) {
@@ -31,6 +32,7 @@
 }
 
 .product__description {
+    display: inline-block !important;
     margin-bottom: 2rem;
 
     @media (min-width: $desktop-width) {

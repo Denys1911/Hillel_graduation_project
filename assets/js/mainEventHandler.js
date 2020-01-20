@@ -73,6 +73,9 @@ function mainEventHandler(event) {
             validatePageNavButtons();
             performPagination();
             break;
+        case 'add_comment':
+            addNewComments(goodsData, itemId);
+            break;
     }
 
     function performPageSwitching(flag) {
