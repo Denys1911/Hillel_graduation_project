@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="basket__background hide"></div>
     <div class="main-container">
         <header class="page-header">
             <div class="dream-container dream-container--nav">
@@ -46,6 +47,14 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="confirmSuccess hide">
+                        <p>Ваш заказ принят в работу!</p>
+                        <p>Ожидайте пока наши менеджеры с Вами свяжутся</p>
+                        <p>Детали заказа:</p>
+                        <ul>
+                        </ul>
+                        <p class="confirmSuccess_total"></p>
+                    </div>
                     <div class="basket hide">
                         <table class="basket__table">
                             <tbody>
@@ -56,7 +65,27 @@
                                 </tr>
                             </tfoot>
                         </table>
-                        <a class="basket__btn btn" href="#">Оформить заказ</a>
+                        <div class="basket__total hide"></div>
+                        <div class="basket__empty">КОРЗИНА ПУСТА</div>
+                        <a class="basket__btn btn hide" href="#" data-info="prepOrder">Оформить заказ</a>
+                        <div class="order__form hide">
+                            <div class="order__error hide"></div>
+                            <ul class="order__form-list">
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_name">Имя:</label>
+                                    <input class="order__input" name="order_name" type="text" placeholder="Введите ваше имя*">
+                                </li>
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_email">E-mail:</label>
+                                    <input class="order__input" type="text" name="order_email" value="" placeholder="Ваш e-mail*">
+                                </li>
+                                <li class="order__form-item">
+                                    <label class="order__label" for="order_tel">Телефон:</label>
+                                    <input class="order__input" type="tel" name="order_tel" value="" placeholder="Ваш телефон*">
+                                </li>
+                            </ul>
+                            <a class="basket__submit btn" data-info="confirmOrder" href="#">Подтвердить заказ</a>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -69,13 +98,16 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="First slide">
+                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="First slide"
+                data-info="show_product" data-item-id="">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="Second slide">
+                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="Second slide"
+                data-info="show_product" data-item-id="">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="Third slide">
+                <img class="d-block w-100" src="assets/img/products/65smgTV.webp" alt="Third slide"
+                data-info="show_product" data-item-id="">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -232,9 +264,9 @@
 
                             <div class="product__btns">
                                 <div class="product__spinner">
-                                    <div class="product__minus"></div>
-                                    <input class="product__count" type="text" value="1">
-                                    <div class="product__plus"></div>
+                                    <div class="product__minus" data-info="decrease"></div>
+                                    <div class="product__count">1</div>
+                                    <div class="product__plus" data-info="increase"></div>
                                 </div>
                                 <button class="product__btn btn">Купить</button>
                             </div>
@@ -249,29 +281,20 @@
                 <div class="comments__left">
                     <ul></ul>
                 </div>
-                <form class="comments__form" method="post">
-                    <div class="comments__form-inner">
-                        <ul class="comments__form-list">
-                            <li class="comments__form-item">
-                                <label class="comments__label" for="name">Имя:</label>
-                                <input class="comments__input comments__input--name" id="name" type="text"
-                                    placeholder="Введтие ваше имя*">
-                            </li>
-                            <li class="comments__form-item">
-                                <label class="comments__label" for="surname">E-mail:</label>
-                                <input class="comments__input comments__input--email" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
-                            </li>
 
-                        </ul>
+                <form id="commentsForm" class="comments__form">
+                    <div class="comments__form-group">
+                        <label class="comments__label" for="name">Имя:</label>
+                        <input class="comments__field comments__field--name" id="name" type="text"
+                            placeholder="Введите ваше имя*" maxlength="40">
                     </div>
 
-                    <div class="comments__form-inner">
-                        <h5 class="comments__form-title">Оставьте свой отзыв:</h5>
-
-                        <textarea class="comments__textarea" name="comment"  placeholder="Ваш отзыв" readonly=""></textarea>
+                    <div class="comments__form-group">
+                        <label class="comments__label" for="comment">Оставьте свой отзыв:</label>
+                        <textarea class="comments__field comments__field--textarea" name="comment" id="comment" placeholder="Ваш отзыв"></textarea>
                     </div>
-
-                    <button class="comments__btn btn" type="submit">Добавить</button>
+                    <div class="comments__invalid hide">User name and comment text shouldn't be empty or start from space</div>
+                    <button class="comments__btn btn" type="button" data-info="add_comment" maxlength="200">Добавить</button>
                 </form>
             </section>
 

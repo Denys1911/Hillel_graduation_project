@@ -6,5 +6,7 @@ function showSlider (goodsData) {
 
     slides.forEach( (slide, index) => {
         slide.alt = tempArray[index].name;
-        slide.src = tempArray[index].img});
+        slide.src = tempArray[index].img;
+        slide.dataset.itemId = tempArray[index].id;
+    });
 }
