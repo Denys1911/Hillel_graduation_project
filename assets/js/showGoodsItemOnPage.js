@@ -43,6 +43,6 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
             $(".comments__left ul").append(newComment);
         })
     } else {
-        $(".comments__left ul").append($(`<li>Новых комментариев нет.<br />Оставьте свой первым</li>`));
+        $(".comments__left ul").append($(`<li class="comment__empty">Новых комментариев нет.<br />Оставьте свой первым</li>`));
     }
 };

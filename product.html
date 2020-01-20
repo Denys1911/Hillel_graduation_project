@@ -166,31 +166,22 @@
             <section class="comments">
                 <h5 class="comments__title">Отзывы:</h5>
 
-                <form class="comments__form" method="post">
-                    <div class="comments__form-inner">                
-                        <ul class="comments__form-list">
-                            <li class="comments__form-item">
-                                <label class="comments__label" for="name">Имя:</label>
-                                <input class="comments__input comments__input--name" id="name" type="text"
-                                    placeholder="Введтие ваше имя*">
-                            </li>
-                            <li class="comments__form-item">
-                                <label class="comments__label" for="surname">E-mail:</label>
-                                <input class="comments__input comments__input--email" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
-                            </li>
- 
-                        </ul>
+                <form id="commentsForm" class="comments__form">
+                    <div class="comments__form-group">                
+                        <label class="comments__label" for="name">Имя:</label>
+                        <input class="comments__field comments__field--name" id="name" type="text"
+                            placeholder="Введтие ваше имя*">
                     </div>
 
-                    <div class="comments__form-inner">
-                        <h5 class="comments__form-title">Оставьте свой отзыв:</h5>
-
-                        <textarea class="comments__textarea" name="comment"  placeholder="Ваш отзыв" readonly=""></textarea>
+                    <div class="comments__form-group">
+                        <label class="comments__label" for="comment">Оставьте свой отзыв:</label>
+                        <textarea class="comments__field comments__field--textarea" name="comment" id="comment" placeholder="Ваш отзыв"></textarea>
                     </div>
                 
                     <button class="comments__btn btn" type="submit">Добавить</button>
                 </form>
-            </section> 
+                <ul class="comments__list"></ul>
+            </section>
         </main>
     
         <footer class="page-footer main-footer dream-team-container">

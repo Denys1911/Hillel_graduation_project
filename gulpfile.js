@@ -39,6 +39,7 @@ gulp.task('js', () => {
         'assets/js/pagination.js',
         'assets/js/showMainAndCategoryPage.js',
         'assets/js/showGoodsItemOnPage.js',
+        'assets/js/comments.js',
         'assets/js/showCartWithGoods.js',
         'assets/js/showFilters.js',
         'assets/js/filterGoods.js',
