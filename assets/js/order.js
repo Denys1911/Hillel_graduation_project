@@ -6,9 +6,8 @@ async function submitOrder (goodsInCartData) {
     $(".order__input").map(function() {
         if (checkValue($(this))) {
             userData.push($( this ).val());
-        } else {    
+        } else {
             $(".order__error").removeClass("hide");
-            return;        
         }
     })
 
@@ -20,6 +19,8 @@ async function submitOrder (goodsInCartData) {
             userInfo: userData,
             userCart: goodsInCartData
         };
+
+        await sendOrderData(order);
 
         goodsInCartData = [];
         localStorage.setItem(goodsStorageName, JSON.stringify(goodsInCartData));
@@ -44,9 +45,6 @@ async function submitOrder (goodsInCartData) {
 
         $(".confirmSuccess_total").text(`ОБЩАЯ СУММА ЗАКАЗА: ${orderTotal}`)
         $(".confirmSuccess").removeClass("hide");
-
-        await sendOrderData(order);
-        // should be moved to down, to get success message
     }
 }
 
@@ -78,7 +76,7 @@ function checkValue(element) {
 
 function sendOrderData(order) {
     $.ajax({
-        url: 'https://example.com/',
+        url: 'https://jsonplaceholder.typicode.com/posts',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(order),

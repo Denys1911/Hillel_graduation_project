@@ -1,6 +1,6 @@
 .basket {
     max-height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -18,6 +18,14 @@
         right: 25%;
         top: 30%;
     }
+}
+
+.confirmSuccess {
+    max-height: 300px;
+    overflow-y: scroll;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .confirmSuccess {
