@@ -19,7 +19,7 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     $(".product__title").text(`${newItem.brand} ${newItem.category} ${newItem.name}`);
     $(".product__img").attr({"src": `${newItem.img}`, "alt": `${newItem.name}`});
     $(".product__price-text").text(`${newItem.price}`);
-    $("button.product__btn").attr("data-item-id",`${newItem.id}`);
+    $("button.product__btn").attr({"data-item-id":`${newItem.id}`, "data-info": "addFromPDP"});
 
     // draw item description properties
     for (let key in newItem) {
@@ -35,7 +35,7 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     // clear previous comments
     $(".comments__left ul li").remove();
 
-    $("button.comments__btn").attr("data-item-id", `${newItem.id}`)
+    $("button.comments__btn").attr({"data-item-id": `${newItem.id}`});
 
     if (newItem.comments.length > 0) {
         newItem.comments.forEach(comment => {

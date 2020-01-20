@@ -30,16 +30,23 @@
     background-color: #eee;
 }
 
-.comments__invalid {
-    position: relative;
-    padding-right: 16px;
-    margin: 10px 0;
-    font-size: 12px;
-    color: red;
+.comments__form, .order__form {}
+
+.comments__form-list, .order__form-list {
+    padding: 0;
+
+    list-style: none;
 }
 
-.comments__invalid + .comments__field {
-    border: 2px solid red;
+.comments__form-item, .order__form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments__input, .order__input {
+    box-sizing: border-box;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
 }
 
 .comments__field {
@@ -64,6 +71,17 @@
     }
 }
 
+  .comments__invalid {
+    position: relative;
+    padding-right: 16px;
+    margin: 10px 0;
+    font-size: 12px;
+    color: red;
+}
+
+.comments__invalid + .comments__field {
+    border: 2px solid red;
+}
 .comments__btn {
     width: 100%;
     padding: 8px 15px 12px;

@@ -1,13 +1,17 @@
-function mainEventHandler(event) {
-    const {goodsData, goodsInCartData} = event.data;
+async function mainEventHandler(event) {
+    const {goodsData} = event.data;
     const target = event.target;
     const dataInfo = target.dataset.info;
     const itemId = parseInt(target.dataset.itemId);
     const mainBlock = $('main');
+    let productQty = $(".product__count");
+    let itemCountValue = parseInt(productQty.text());
+    const CART_STORAGE_NAME = 'goods_in_cart';
+    let goodsInCartData = await getGoodsInCartData(CART_STORAGE_NAME);
 
     // when click isn't on basket element, basket should be hidden
-    if (!(target.className).includes("basket")) {
-        $(".basket").addClass("hide");
+    if ((target.className).includes("basket__background")) {
+        $(".basket, .basket__background, .confirmSuccess").addClass("hide");
     }
 
     switch (dataInfo) {
@@ -20,19 +24,30 @@ function mainEventHandler(event) {
             showMainAndCategoryPage(goodsData, dataInfo);
             break;
         case 'add':
+            cartHandler(dataInfo, itemId, goodsInCartData, goodsData);
+            break;
         case 'show_cart':
-            //add to cart function;
-            showCartWithGoods(itemId, goodsInCartData);
-            //они будут работать вместе, т.к. мы показываем корзину каждый раз когда добавляем товар в нее
+            showCartWithGoods(goodsInCartData);
+            break;
+        case 'plus':
+            cartHandler(dataInfo, itemId, goodsInCartData);
+            break;
+        case 'minus':
+            cartHandler(dataInfo, itemId, goodsInCartData);
             break;
         case 'remove':
-            //remove from cart function;
+            cartHandler(dataInfo, itemId, goodsInCartData);
             break;
         case 'increase':
-            //increase q-ty of item in cart function;
+            productQty.text(++itemCountValue);
             break;
         case 'decrease':
-            //decrease q-ty of item in cart function;
+            if (itemCountValue > 1) {
+                productQty.text(--itemCountValue);
+            }  
+            break;
+        case 'addFromPDP':
+            cartHandler(dataInfo, itemId, goodsInCartData, goodsData, itemCountValue);
             break;
         case 'show_product':
             showGoodsOnItemPage(goodsData, itemId);
@@ -73,6 +88,12 @@ function mainEventHandler(event) {
             validatePageNavButtons();
             performPagination();
             break;
+        case 'prepOrder':
+            $(".basket__btn").addClass("hide");
+            $(".order__form, .basket__submit").removeClass("hide");
+            break;
+        case 'confirmOrder':
+            submitOrder(goodsInCartData);
         case 'add_comment':
             addNewComments(goodsData, itemId);
             break;
