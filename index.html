@@ -253,8 +253,7 @@
 
 
                 <form id="commentsForm" class="comments__form">
-                    <div class="comments__invalid hide">User name and comment text shouldn't be empty or start from space</div>
-                    <div class="comments__form-group">                
+                    <div class="comments__form-group">
                         <label class="comments__label" for="name">Имя:</label>
                         <input class="comments__field comments__field--name" id="name" type="text"
                             placeholder="Введите ваше имя*" maxlength="40">
@@ -264,7 +263,7 @@
                         <label class="comments__label" for="comment">Оставьте свой отзыв:</label>
                         <textarea class="comments__field comments__field--textarea" name="comment" id="comment" placeholder="Ваш отзыв"></textarea>
                     </div>
-                
+                    <div class="comments__invalid hide">User name and comment text shouldn't be empty or start from space</div>
                     <button class="comments__btn btn" type="button" data-info="add_comment" maxlength="200">Добавить</button>
                 </form>
             </section>
