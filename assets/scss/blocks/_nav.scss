@@ -31,9 +31,7 @@
 .nav__link {
     display: block;
     padding: 7px 20px;
-
     box-sizing: border-box;
-
     text-decoration: none;
     color: $black;
     font-weight: 700;
@@ -41,6 +39,11 @@
     @media (min-width: $desktop-width) {
         padding: 0;
     }
+}
+
+.nav-link--active {
+    color: #fb565a;
+    border-bottom: 2px solid  #fb565a;
 }
 
 .nav__link:hover {
