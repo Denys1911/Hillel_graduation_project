@@ -153,4 +153,8 @@
     border-radius: 0 4px 4px 0;
 }
 
+.product__btns[data-available="false"] {
+    display: none;
+}
+
 
