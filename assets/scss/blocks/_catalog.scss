@@ -177,6 +177,10 @@
     }
 }
 
+.catalog__item[data-available="false"] .catalog__btn {
+    display: none;
+}
+
 .catalog__text {
     display: none;
     font-size: 1.6rem;

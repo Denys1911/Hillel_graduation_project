@@ -18,17 +18,71 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
 
     $(".product__title").text(`${newItem.brand} ${newItem.category} ${newItem.name}`);
     $(".product__img").attr({"src": `${newItem.img}`, "alt": `${newItem.name}`});
-    $(".product__price-text").text(`${newItem.price}`);
+    $(".product__price-text").text(`${newItem.price} грн.`);
+    $(".product__btns").attr({"data-available": `${newItem.available}`});
     $("button.product__btn").attr({"data-item-id":`${newItem.id}`, "data-info": "addFromPDP"});
 
     // draw item description properties
     for (let key in newItem) {
-        if (key !== "price" && key !== "img" && key !== "comments") {
-            itemDesc.append(`
-            <div class="product__row">
-                <div class="product__col product__col--properties">${key}</div>
-                <div class="product__col product__col--values">${newItem[key]}</div>
-            </div>`);
+        if (key !== "price" && key !== "img" && key !== "comments" && key !== "popularity") {
+            switch (key) {
+                case "available":
+                    if (newItem[key]) {
+                        itemDesc.append(`
+                        <div class="product__row">
+                            <div class="product__col product__col--properties">Доступность</div>
+                            <div class="product__col product__col--values">ЕСТЬ В НАЛИЧИИ</div>
+                        </div>`);
+                    } else {
+                        itemDesc.append(`
+                        <div class="product__row">
+                            <div class="product__col product__col--properties">Доступность</div>
+                            <div class="product__col product__col--values">НЕТ В НАЛИЧИИ</div>
+                        </div>`);
+                    }
+                    break;
+                case "brand":
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">Бренд</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                    break;
+                case "name":
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">Название</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                    break;
+                case "category":
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">Категория</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                    break;
+                case "resolution":
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">Разрешение</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                    break;
+                case "cpu":
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">Процессор</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                    break;
+                default:
+                    itemDesc.append(`
+                    <div class="product__row">
+                        <div class="product__col product__col--properties">${key}</div>
+                        <div class="product__col product__col--values">${newItem[key]}</div>
+                    </div>`);
+                }   
         }
     }
 
