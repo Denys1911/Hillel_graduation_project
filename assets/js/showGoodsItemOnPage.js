@@ -1,6 +1,4 @@
 const showGoodsOnItemPage = (goodsData, itemId) => {
-    let itemDesc = $(".product__table");
-
     let newItem = goodsData.find(good => {
         if (good.id === itemId) {
             return good;
@@ -28,60 +26,29 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
             switch (key) {
                 case "available":
                     if (newItem[key]) {
-                        itemDesc.append(`
-                        <div class="product__row">
-                            <div class="product__col product__col--properties">Доступность</div>
-                            <div class="product__col product__col--values">ЕСТЬ В НАЛИЧИИ</div>
-                        </div>`);
+                        appendItemProperty("Доступность","ЕСТЬ В НАЛИЧИИ");
                     } else {
-                        itemDesc.append(`
-                        <div class="product__row">
-                            <div class="product__col product__col--properties">Доступность</div>
-                            <div class="product__col product__col--values">НЕТ В НАЛИЧИИ</div>
-                        </div>`);
+                        appendItemProperty("Доступность","НЕТ В НАЛИЧИИ");
                     }
                     break;
                 case "brand":
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">Бренд</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty("Бренд",`${newItem[key]}`);
                     break;
                 case "name":
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">Название</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty("Название",`${newItem[key]}`);
                     break;
                 case "category":
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">Категория</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty("Категория",`${newItem[key]}`);
                     break;
                 case "resolution":
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">Разрешение</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty("Разрешение",`${newItem[key]}`);
                     break;
                 case "cpu":
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">Процессор</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty("Процессор",`${newItem[key]}`)
                     break;
                 default:
-                    itemDesc.append(`
-                    <div class="product__row">
-                        <div class="product__col product__col--properties">${key}</div>
-                        <div class="product__col product__col--values">${newItem[key]}</div>
-                    </div>`);
+                    appendItemProperty(`${key}`,`${newItem[key]}`)
+                    break;
                 }   
         }
     }
@@ -100,3 +67,13 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
         $(".comments__left ul").append($(`<li class="comment__empty">Новых комментариев нет.<br />Оставьте свой первым</li>`));
     }
 };
+
+function appendItemProperty(field, value) {
+    let itemDesc = $(".product__table");
+
+    itemDesc.append(`
+        <div class="product__row">
+            <div class="product__col product__col--properties">${field}</div>
+            <div class="product__col product__col--values">${value}</div>
+        </div>`);
+}
