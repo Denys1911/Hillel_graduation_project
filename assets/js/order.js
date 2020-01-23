@@ -51,9 +51,9 @@ async function submitOrder (goodsInCartData) {
 function checkValue(element) {
     let value = element.val();
     let error = $(".order__error");
-    let name = /[A-Za-z]{1,30}/;
-    let email = /\w{1,20}\@\w{1,10}\.\w{1,10}/;
-    let phone = /\d{3}\-\d{3}\-\d{4}/;
+    let name = /^[A-Za-z]{1,30}$/;
+    let email = /^\w{1,20}\@\w{1,10}\.\w{1,10}$/;
+    let phone = /^\d{3}\-\d{3}\-\d{4}$/;
 
     switch (element.attr("name")) {
         case 'order_name':
