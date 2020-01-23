@@ -78,10 +78,27 @@ gulp.task('js', () => {
         .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('css-libs', () => {
+    return gulp.src([
+        'node_modules/bootstrap/dist/css/bootstrap.min.css'
+    ])
+        .pipe(concat('_libs.scss'))
+        .pipe(gulp.dest('assets/scss/vendors'))
+});
+
+gulp.task('js-libs', () => {
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+    ])
+        .pipe(concat('libs.min.js'))
+        .pipe(gulp.dest('build/js'))
+});
+
 gulp.task('watch', () => {
     gulp.watch('*.html', gulp.parallel('html'));
     gulp.watch('assets/scss/**/*.scss', gulp.parallel('scss'));
     gulp.watch('assets/js/**/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('css-libs', 'js-libs', 'scss', 'js', 'browser-sync', 'watch'));

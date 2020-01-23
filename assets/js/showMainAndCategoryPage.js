@@ -2,15 +2,16 @@ const showMainAndCategoryPage = (goodsData, category) => {
     $("section.product, section.comments").addClass("hide");
     $("li.catalog__item").remove();
     $(".carousel, section.catalog, aside.filters, .page-title-name").removeClass("hide");
+    $(".nav__link").removeClass("nav-link--active");
+    $(`.nav__link[data-info=${category}]`).addClass("nav-link--active");
 
-    // add special data attr for filter block
     $("main").attr("data-current-category", category);
 
     if (!category) {
         $("main").removeAttr("data-current-category");
+        $(".nav__link").first().addClass("nav-link--active");
     }
 
-    // clear filters when category is choosen
     $(".filters__form").trigger("reset");
 
     let pageTitleName = $(".page-title-name");
