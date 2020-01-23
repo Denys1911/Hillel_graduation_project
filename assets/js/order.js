@@ -24,6 +24,9 @@ async function submitOrder (goodsInCartData) {
 
         goodsInCartData = [];
         localStorage.setItem(goodsStorageName, JSON.stringify(goodsInCartData));
+        $(".order__input").each(function() {
+            $(this).val("");
+        });
 
         let orderTotal = 0;
         infoContainer.append(`<li>Информация о заказе №${order.id}: <br />Покупатель: </li>`);
@@ -51,7 +54,7 @@ async function submitOrder (goodsInCartData) {
 function checkValue(element) {
     let value = element.val();
     let error = $(".order__error");
-    let name = /^[A-Za-z]{1,30}$/;
+    let name = /^([A-Za-z]|[а-я,А-Я]){1,30}$/;
     let email = /^\w{1,20}\@\w{1,10}\.\w{1,10}$/;
     let phone = /^\d{3}\-\d{3}\-\d{4}$/;
 

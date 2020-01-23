@@ -4,7 +4,7 @@ function showCartWithGoods (goodsInCartData) {
 
     if (goodsInCartData.length) {
         let goodsTotal = 0;
-        $(".basket__empty, .order__form").addClass("hide");
+        $(".basket__empty, .order__form, .order__error").addClass("hide");
         $(".basket__total, .basket__btn").removeClass("hide");
         goodsInCartData.forEach(good => {
             let newGood = $(`

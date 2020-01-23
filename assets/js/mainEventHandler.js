@@ -94,6 +94,7 @@ async function mainEventHandler(event) {
             break;
         case 'confirmOrder':
             submitOrder(goodsInCartData);
+            break;
         case 'add_comment':
             addNewComments(goodsData, itemId);
             break;

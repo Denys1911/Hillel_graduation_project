@@ -6,7 +6,7 @@ const showGoodsOnItemPage = (goodsData, itemId) => {
     });
 
     // hide slider, filters and categories
-    $("section.catalog, aside.filters, .carousel, .page-title-name").addClass("hide");
+    $("section.catalog, aside.filters, .carousel, .page-title-name, .basket, .basket__background").addClass("hide");
 
     // show product and comments
     $("section.product, section.comments").removeClass("hide");
