@@ -34,11 +34,19 @@
 
 .catalog__item {
     position: relative;
+    box-sizing: border-box;
 
     margin-bottom: 2rem;
+    border: 2px solid #ece9e6;
+    border-top: 10px solid #ece9e6;;
 
     &--hidden {
         display: none;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: #4d4d4d;
     }
 
     @media (min-width: $desktop-width) {
@@ -47,76 +55,21 @@
         margin-bottom: 4rem;
     }
 
-    &::after {
-        content: "";
-
-        position: absolute;
-        top: 13px;
-        left: 62px;
-
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-
-        background-color: #ffffff;
-    }
 
     &:nth-child(2n) {
         @media (min-width: $desktop-width) {
             margin-right: 0px;
         }
     }
-}
 
-.catalog__item-browser {
-    position: relative;
-    height: 40px;
-    background-color: #e9e9e9;
-    border-radius: 5px 5px 0 0;
-    transition: all .25s ease;
-
-    @media (min-width: $desktop-width) {
-        width: 360px;
-    }
-
-    &::before {
-        content: "";
-
-        position: absolute;
-        top: 13px;
-        left: 16px;
-
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-
-        background-color: #ffffff;
-    }
-    &::after {
-        content: "";
-
-        position: absolute;
-        top: 13px;
-        left: 39px;
-
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-
-        background-color: #ffffff;
+    @media screen and (max-width: $mobile-width-only) {
+        width: 100%;
     }
 }
 
-.catalog__item:hover .catalog__item-browser,
-.catalog__item:focus .catalog__item-browser {
-    background-color: #4d4d4d;
-}
 
 .catalog__img {
     display: block;
-    box-sizing: border-box;
-    border: 1px solid #ece9e6;
-    border-top: none;
     height: 220px;
     margin: 0 auto;
 }
@@ -130,8 +83,6 @@
     width: 100%;
 
     text-align: center;
-
-    background-color: #eeeeee;
 
     @media (min-width: $desktop-width) {
         left: 0;
@@ -175,6 +126,11 @@
         background-color: #d7373b;
         box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
     }
+
+    @media screen and (max-width: $mobile-width-only) {
+        width: 100%;
+    }
+
 }
 
 .catalog__text {

@@ -207,7 +207,8 @@ main[data-current-category="phone"] {
     &::before {
         content: "";
         position: absolute;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: -35px;
 
         width: 20px;
@@ -240,7 +241,8 @@ main[data-current-category="phone"] {
     &::before {
         position: absolute;
         content: "";
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: -36px;
 
         width: 23px;

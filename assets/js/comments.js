@@ -23,7 +23,7 @@ function addNewComments(goodsData, itemId) {
 
         setGoodsData(GOODS_STORAGE_NAME, goodsData);
 
-        let newComment = $(`<li>${commentData.user} left comment: <br /> "${commentData.text}"</li>`);
+        let newComment = $(`<li>${commentData.user}: <br /> "${commentData.text}"</li>`);
         commentsContainer.append(newComment);
     }
     else {

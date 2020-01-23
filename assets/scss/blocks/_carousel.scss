@@ -7,8 +7,6 @@
 
 .carousel-inner,
 .carousel-item > img {
-    width: 60vw;
-    height: 70vh;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -44,12 +42,10 @@
     margin-bottom: 3rem;
 }
 
-
 @media screen and (max-width: $mobile-width-only) {
     .carousel-inner,
     .carousel-item > img {
-        width: 60vw;
-        height: 40vh;
+        width: 300px;
         margin: 0 auto;
     }
 }
